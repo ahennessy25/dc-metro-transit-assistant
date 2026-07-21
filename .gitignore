@@ -1,0 +1,32 @@
+# --- Python ---
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+build/
+dist/
+
+# --- Secrets / environment ---
+.env
+*.env.local
+
+# --- Project data (fetched via scripts, not committed) ---
+DC-Metro-GTFS-Files/
+chroma_db/
+*.zip
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs / misc ---
+*.log
+.pytest_cache/
