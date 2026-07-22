@@ -1,0 +1,6 @@
+requests
+pandas
+python-dotenv
+anthropic
+chromadb
+gtfs-realtime-bindings
