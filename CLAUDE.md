@@ -23,9 +23,10 @@ get_weather(when="now") — current/forecast conditions
 search_station_info(query) — RAG retrieval over the ChromaDB index
 Team conventions
 
-Two contributors on this project — work on feature branches per area (e.g. data-pipeline, agent-tools, ui-eval), merge to main via PR even though it's a small team, so each person's contribution stays reviewable and attributable.
+Two or more contributors on this project — work on feature branches per area (e.g. data-pipeline, agent-tools, ui-eval), merge to main via PR even though it's a small team, so each person's contribution stays reviewable and attributable.
 Prefer small, single-purpose commits over large batched ones.
 When making a non-obvious design decision (e.g., chunking strategy, tool-routing logic), briefly explain the reasoning before implementing — this project doubles as a learning exercise, and both contributors need to be able to explain how it works, not just that it works.
+When making a non-trivial design decision during implementation (e.g., choice of library, data structure, architecture pattern, or a deviation from the original plan), append a short entry to DECISIONS.md — decision plus one-line reasoning — as part of that same change, not as a separate follow-up step.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
