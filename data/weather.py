@@ -8,6 +8,7 @@ forecasts and nearby observation stations.
 import requests
 
 from config import NWS_USER_AGENT
+from data.cache import cached
 
 DC_LATITUDE = 38.9072
 DC_LONGITUDE = -77.0369
@@ -17,6 +18,12 @@ REQUEST_HEADERS = {
     "User-Agent": NWS_USER_AGENT,
     "Accept": "application/geo+json",
 }
+
+# NWS observation stations typically report on the order of once an hour,
+# and the forecast endpoint updates a few times a day — a 15-minute TTL
+# meaningfully cuts repeated calls without ever serving noticeably stale
+# weather for a chat-driven query.
+WEATHER_TTL_SECONDS = 15 * 60
 
 
 class NwsApiError(RuntimeError):
@@ -50,6 +57,7 @@ def _get_point_metadata(latitude: float, longitude: float) -> dict:
     }
 
 
+@cached(ttl_seconds=WEATHER_TTL_SECONDS)
 def get_current_conditions(latitude: float = DC_LATITUDE, longitude: float = DC_LONGITUDE) -> dict:
     """Returns the latest observed conditions from the nearest NWS station."""
     point_metadata = _get_point_metadata(latitude, longitude)
@@ -81,6 +89,7 @@ def get_current_conditions(latitude: float = DC_LATITUDE, longitude: float = DC_
     }
 
 
+@cached(ttl_seconds=WEATHER_TTL_SECONDS)
 def get_forecast(periods: int = 3, latitude: float = DC_LATITUDE, longitude: float = DC_LONGITUDE) -> list[dict]:
     """Returns the next `periods` forecast periods (e.g. Today, Tonight, Tomorrow)."""
     point_metadata = _get_point_metadata(latitude, longitude)

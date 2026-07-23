@@ -11,10 +11,20 @@ from google.protobuf.message import DecodeError
 from google.transit import gtfs_realtime_pb2
 
 from config import WMATA_API_KEY
+from data.cache import cached
 
 VEHICLE_POSITIONS_URL = "https://api.wmata.com/gtfs/rail-gtfsrt-vehiclepositions.pb"
 TRIP_UPDATES_URL = "https://api.wmata.com/gtfs/rail-gtfsrt-tripupdates.pb"
 SERVICE_ALERTS_URL = "https://api.wmata.com/gtfs/rail-gtfsrt-alerts.pb"
+
+# Vehicle positions/trip updates come from the same fast-moving GTFS-RT feed
+# WMATA regenerates roughly every 15-30s, so a 30s TTL stays close to live
+# while still saving a re-fetch on rapid repeated calls (e.g. multiple tool
+# calls in one conversation turn). Alerts change less often — a train's
+# position updates every few seconds, but a service alert typically stays
+# active for minutes to hours — so a longer 60s TTL is safe there.
+VEHICLE_TRIP_TTL_SECONDS = 30
+SERVICE_ALERTS_TTL_SECONDS = 60
 
 
 class WmataRealtimeError(RuntimeError):
@@ -65,6 +75,7 @@ def _enum_name(enum_wrapper, value) -> str:
         return str(value)
 
 
+@cached(ttl_seconds=VEHICLE_TRIP_TTL_SECONDS)
 def get_vehicle_positions() -> list[dict]:
     """Returns current Metrorail train positions as a list of dicts."""
     feed = _fetch_feed(VEHICLE_POSITIONS_URL)
@@ -95,6 +106,7 @@ def get_vehicle_positions() -> list[dict]:
     return positions
 
 
+@cached(ttl_seconds=VEHICLE_TRIP_TTL_SECONDS)
 def get_trip_updates() -> list[dict]:
     """Returns Metrorail trip updates (predicted stop arrivals/departures) as a list of dicts."""
     feed = _fetch_feed(TRIP_UPDATES_URL)
@@ -139,6 +151,7 @@ def get_trip_updates() -> list[dict]:
     return updates
 
 
+@cached(ttl_seconds=SERVICE_ALERTS_TTL_SECONDS)
 def get_service_alerts() -> list[dict]:
     """Returns active Metrorail service alerts as a list of dicts."""
     feed = _fetch_feed(SERVICE_ALERTS_URL)
@@ -198,3 +211,15 @@ if __name__ == "__main__":
     print(f"  Active vehicles: {len(vehicle_positions)}")
     print(f"  Trip updates: {len(trip_updates)}")
     print(f"  Active alerts: {len(service_alerts)}")
+
+    # Call each again (well within their TTLs) so the stats below show a
+    # real hit, not just three misses — that's the actual proof caching
+    # is doing something rather than being silently bypassed.
+    get_vehicle_positions()
+    get_trip_updates()
+    get_service_alerts()
+
+    print("\nCache stats:")
+    print(f"  Vehicle positions: {get_vehicle_positions.cache.stats()}")
+    print(f"  Trip updates:      {get_trip_updates.cache.stats()}")
+    print(f"  Service alerts:    {get_service_alerts.cache.stats()}")

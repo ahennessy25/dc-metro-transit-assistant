@@ -1,0 +1,68 @@
+[
+  {
+    "text": "PLACEHOLDER: Metro Center has elevator access from street level to the mezzanine and from the mezzanine to both the Red Line and Blue/Orange/Silver Line platforms. All entrances are accessible.",
+    "station": "Metro Center",
+    "type": "accessibility",
+    "source": "WMATA station accessibility guide (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Union Station has a street-level elevator at the main entrance and platform elevators serving the Red Line. Escalator outages are common during peak commuter rail transfer times.",
+    "station": "Union Station",
+    "type": "accessibility",
+    "source": "WMATA station accessibility guide (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Dupont Circle's south entrance (19th St) has no elevator; wheelchair users should use the north entrance (Q St), which has full elevator access to the platform.",
+    "station": "Dupont Circle",
+    "type": "accessibility",
+    "source": "WMATA station accessibility guide (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Gallery Place-Chinatown has elevator access at all entrances and between both the Red Line and Green/Yellow Line platforms, though transfers require exiting fare gates at street level during certain elevator outages.",
+    "station": "Gallery Place-Chinatown",
+    "type": "accessibility",
+    "source": "WMATA station accessibility guide (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Rosslyn has a single long escalator bank and one elevator connecting the mezzanine to the platform; the elevator is the only accessible path when escalators are under maintenance.",
+    "station": "Rosslyn",
+    "type": "accessibility",
+    "source": "WMATA station accessibility guide (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Single-tracking between Metro Center and Gallery Place-Chinatown on the Red Line due to weekend track maintenance, resulting in delays of up to 15 minutes.",
+    "station": "Metro Center",
+    "type": "alert_history",
+    "source": "WMATA MetroAlerts archive (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Elevator at the Q St entrance to Dupont Circle was out of service for approximately two weeks for a scheduled motor replacement.",
+    "station": "Dupont Circle",
+    "type": "alert_history",
+    "source": "WMATA MetroAlerts archive (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Systemwide reduced service on a federal holiday, with trains running on a weekend schedule across all six lines.",
+    "station": null,
+    "type": "alert_history",
+    "source": "WMATA MetroAlerts archive (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: SmarTrip fares are calculated by distance traveled and time of day; peak fares apply on weekdays roughly 5-9:30am and 3-7pm, with off-peak (lower) fares at all other times.",
+    "station": null,
+    "type": "faq",
+    "source": "WMATA trip-planning FAQ (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Bikes are permitted on Metrorail at all times except during designated peak-hour restrictions on certain lines; folding bikes are always allowed.",
+    "station": null,
+    "type": "faq",
+    "source": "WMATA trip-planning FAQ (placeholder)"
+  },
+  {
+    "text": "PLACEHOLDER: Free transfers between Metrorail and Metrobus are available within a set time window when paying with the same SmarTrip card.",
+    "station": null,
+    "type": "faq",
+    "source": "WMATA trip-planning FAQ (placeholder)"
+  }
+]
