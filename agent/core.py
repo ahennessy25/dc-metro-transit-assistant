@@ -39,11 +39,17 @@ SYSTEM_PROMPT = (
 _client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 
-def ask(user_question: str) -> str:
+def ask(user_question: str) -> dict:
     """Answers a question, executing tool calls (possibly several, possibly
     over several rounds) until Claude gives a final text-only answer.
+
+    Returns {"answer": str, "tool_calls": [{"name": str, "args": dict}, ...]}
+    — tool_calls records every tool executed, in order, across all rounds,
+    so a caller (or an eval harness) can see what the agent actually did,
+    not just the resulting text.
     """
     messages = [{"role": "user", "content": user_question}]
+    tool_calls = []
 
     for _ in range(MAX_TOOL_ITERATIONS):
         response = _client.messages.create(
@@ -56,7 +62,9 @@ def ask(user_question: str) -> str:
 
         tool_use_blocks = [block for block in response.content if block.type == "tool_use"]
         if not tool_use_blocks:
-            return _extract_text(response)
+            return {"answer": _extract_text(response), "tool_calls": tool_calls}
+
+        tool_calls.extend({"name": block.name, "args": block.input} for block in tool_use_blocks)
 
         messages.append({"role": "assistant", "content": response.content})
         messages.append(
@@ -77,7 +85,7 @@ def ask(user_question: str) -> str:
         system=SYSTEM_PROMPT,
         messages=messages,
     )
-    return _extract_text(final_response)
+    return {"answer": _extract_text(final_response), "tool_calls": tool_calls}
 
 
 def _run_tool(tool_use_block) -> dict:
@@ -110,9 +118,12 @@ if __name__ == "__main__":
             break
 
         try:
-            answer = ask(question)
+            result = ask(question)
         except Exception as e:
             print(f"\n[Error] {e}")
             continue
 
-        print(f"\nAssistant: {answer}")
+        if result["tool_calls"]:
+            used = ", ".join(call["name"] for call in result["tool_calls"])
+            print(f"  (used tools: {used})")
+        print(f"\nAssistant: {result['answer']}")
