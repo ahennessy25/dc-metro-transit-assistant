@@ -32,10 +32,18 @@ agent/manual_test.py.)
 """
 
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 from agent.core import ask
+
+# Windows consoles often default to cp1252, which can't print characters
+# Claude's answers commonly include (em dashes, degree signs, arrows, emoji).
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
 
 RESULTS_LOG_PATH = Path(__file__).parent / "verification_results.log"
 
@@ -378,54 +386,61 @@ def run_verification():
     timestamp = datetime.now(timezone.utc).isoformat()
     header = f"=== Verification run: {timestamp} ==="
 
-    log_lines = [header]
-    print(header)
+    # Written incrementally (one case at a time, flushed immediately)
+    # rather than batched into memory and written once at the end — a
+    # crash partway through (a bad API response, an encoding error on
+    # print, etc.) would otherwise lose every already-completed case, and
+    # those already cost real API calls to produce.
+    log_file = open(RESULTS_LOG_PATH, "a", encoding="utf-8")
 
-    runs = []
-    for i, case in enumerate(TEST_CASES, start=1):
-        run = _run_case(case)
-        runs.append(run)
-        entry = _format_case_log(i, len(TEST_CASES), run)
-        print(entry)
-        log_lines.append(entry)
+    def emit(text):
+        print(text)
+        log_file.write(text + "\n")
+        log_file.flush()
 
-    checked_runs = [r for r in runs if not r["needs_human_read"]]
-    human_read_runs = [r for r in runs if r["needs_human_read"]]
+    try:
+        emit(header)
 
-    passed = sum(1 for r in checked_runs if r["tools_pass"])
-    failed_runs = [r for r in checked_runs if not r["tools_pass"]]
+        runs = []
+        for i, case in enumerate(TEST_CASES, start=1):
+            run = _run_case(case)
+            runs.append(run)
+            emit(_format_case_log(i, len(TEST_CASES), run))
 
-    clarifying_count = sum(
-        1 for r in human_read_runs if r["heuristic_flag"] == "looks like a clarifying question"
-    )
+        checked_runs = [r for r in runs if not r["needs_human_read"]]
+        human_read_runs = [r for r in runs if r["needs_human_read"]]
 
-    summary_lines = [
-        "",
-        "=== SUMMARY ===",
-        f"Tool-routing checks: {passed}/{len(checked_runs)} passed",
-    ]
+        passed = sum(1 for r in checked_runs if r["tools_pass"])
+        failed_runs = [r for r in checked_runs if not r["tools_pass"]]
 
-    if failed_runs:
-        summary_lines.append("Failures:")
-        for r in failed_runs:
-            summary_lines.append(
-                f"  - \"{r['case']['question']}\" "
-                f"expected {r['case']['expected_tools']}, got {r['actual_tool_names']}"
-            )
+        clarifying_count = sum(
+            1 for r in human_read_runs if r["heuristic_flag"] == "looks like a clarifying question"
+        )
 
-    summary_lines.append(
-        f"Ambiguity/out-of-scope cases: {len(human_read_runs)} total, all need human read "
-        f"({clarifying_count} looked like a clarifying question by the heuristic, "
-        f"{len(human_read_runs) - clarifying_count} did not)"
-    )
+        summary_lines = [
+            "",
+            "=== SUMMARY ===",
+            f"Tool-routing checks: {passed}/{len(checked_runs)} passed",
+        ]
 
-    summary_text = "\n".join(summary_lines)
-    print(summary_text)
-    log_lines.append(summary_text)
-    log_lines.append("")
+        if failed_runs:
+            summary_lines.append("Failures:")
+            for r in failed_runs:
+                summary_lines.append(
+                    f"  - \"{r['case']['question']}\" "
+                    f"expected {r['case']['expected_tools']}, got {r['actual_tool_names']}"
+                )
 
-    with open(RESULTS_LOG_PATH, "a", encoding="utf-8") as f:
-        f.write("\n".join(log_lines) + "\n")
+        summary_lines.append(
+            f"Ambiguity/out-of-scope cases: {len(human_read_runs)} total, all need human read "
+            f"({clarifying_count} looked like a clarifying question by the heuristic, "
+            f"{len(human_read_runs) - clarifying_count} did not)"
+        )
+        summary_lines.append("")
+
+        emit("\n".join(summary_lines))
+    finally:
+        log_file.close()
 
     print(f"\nFull results appended to {RESULTS_LOG_PATH}")
 
