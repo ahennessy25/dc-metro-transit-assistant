@@ -5,3 +5,4 @@ anthropic
 chromadb
 gtfs-realtime-bindings
 pytest
+gradio
