@@ -1,5 +1,5 @@
 import gradio as gr
-from agent.agent import ask
+from agent.core import ask
 
 def respond(message, history):
     return ask(message)["answer"]
