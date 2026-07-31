@@ -1,8 +1,16 @@
 import gradio as gr
 from agent.core import ask
 
+def _clean_history(history):
+    """Strips Gradio's chat history dicts down to role/content only.
+
+    Gradio's history dicts can carry extra keys (e.g. "metadata", "options")
+    beyond role/content; the Anthropic Messages API rejects unknown fields.
+    """
+    return [{"role": m["role"], "content": m["content"]} for m in history]
+
 def respond(message, history):
-    return ask(message)["answer"]
+    return ask(message, conversation_history=_clean_history(history))["answer"]
 
 # WMATA brand palette
 WMATA_NAVY = "#003DA5"
@@ -86,7 +94,7 @@ toggle_js = """
 }
 """
 
-with gr.Blocks(theme=theme, css=custom_css, title="DC Metro Transit Assistant") as demo:
+with gr.Blocks(title="DC Metro Transit Assistant") as demo:
     with gr.Row():
         gr.HTML(f"""
             <div id="header" style="flex-grow:1;">
@@ -120,4 +128,4 @@ with gr.Blocks(theme=theme, css=custom_css, title="DC Metro Transit Assistant") 
     theme_toggle.click(fn=None, inputs=None, outputs=None, js=toggle_js)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=theme, css=custom_css)

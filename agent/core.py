@@ -39,16 +39,22 @@ SYSTEM_PROMPT = (
 _client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 
-def ask(user_question: str) -> dict:
+def ask(user_question: str, conversation_history: list = None) -> dict:
     """Answers a question, executing tool calls (possibly several, possibly
     over several rounds) until Claude gives a final text-only answer.
+
+    conversation_history, if given, is a list of prior {"role": ...,
+    "content": ...} message dicts (same shape as the Anthropic Messages API)
+    that gets prepended to messages so the model sees prior turns. Omit it
+    (or pass an empty list) for the existing single-turn behavior.
 
     Returns {"answer": str, "tool_calls": [{"name": str, "args": dict}, ...]}
     — tool_calls records every tool executed, in order, across all rounds,
     so a caller (or an eval harness) can see what the agent actually did,
     not just the resulting text.
     """
-    messages = [{"role": "user", "content": user_question}]
+    messages = list(conversation_history) if conversation_history else []
+    messages.append({"role": "user", "content": user_question})
     tool_calls = []
 
     for _ in range(MAX_TOOL_ITERATIONS):
