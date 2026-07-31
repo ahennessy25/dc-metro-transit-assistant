@@ -22,6 +22,8 @@ dispatch map.
 
 import time
 
+import pandas as pd
+
 from data.rag_index import search_station_info
 from data.wmata_realtime import get_service_alerts as _get_all_service_alerts
 from data.wmata_realtime import get_trip_updates
@@ -68,6 +70,20 @@ def _match_station_stop_ids(station_query, stops_df):
     return set(matches["stop_id"])
 
 
+def _first_and_last(stop_times_df, n=8):
+    """Returns up to `n` earliest and `n` latest rows (by arrival_time).
+
+    A plain .head(n) on a full day's schedule only ever returns the first
+    trains of service — a "what time's the last train" question can never
+    be answered from that, since the answer is truncated away before it
+    gets there. Sampling both ends keeps the result compact while covering
+    both first-train and last-train questions from a single call.
+    """
+    if len(stop_times_df) <= 2 * n:
+        return stop_times_df
+    return pd.concat([stop_times_df.head(n), stop_times_df.tail(n)])
+
+
 def get_scheduled_times(route, stop):
     """Static (published) scheduled times for a route+stop, from GTFS."""
     data = _get_static_data()
@@ -105,7 +121,7 @@ def get_scheduled_times(route, stop):
             "arrival_time": row["arrival_time"],
             "departure_time": row["departure_time"],
         }
-        for _, row in matching_stop_times.head(15).iterrows()
+        for _, row in _first_and_last(matching_stop_times).iterrows()
     ]
 
 
@@ -184,8 +200,11 @@ TOOL_SCHEMAS = [
             "times for a specific route and stop, from the official GTFS schedule — not live/"
             "real-time data. Use this for questions about the planned schedule (e.g. 'what time "
             "does the Red Line usually run at Metro Center', 'what's the first train in the "
-            "morning'), NOT for 'when is the next train arriving right now' — use "
-            "get_real_time_arrivals for that instead."
+            "morning', 'when's the last train'), NOT for 'when is the next train arriving right "
+            "now' — use get_real_time_arrivals for that instead. Returns only a sample of the "
+            "day's scheduled times (the first several and last several), not the full schedule "
+            "— it will have first-train and last-train times, but may not have a specific "
+            "midday time the user asks about."
         ),
         "input_schema": {
             "type": "object",

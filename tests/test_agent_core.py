@@ -42,7 +42,7 @@ def test_no_tool_call_returns_text_immediately(monkeypatch):
 
     result = agent_core.ask("what's 6 times 7")
 
-    assert result == "42 minutes"
+    assert result == {"answer": "42 minutes", "tool_calls": []}
     assert mock_create.call_count == 1
     fake_tool.assert_not_called()
 
@@ -65,7 +65,8 @@ def test_single_tool_call_dispatches_correct_function_and_arguments(monkeypatch)
 
     result = agent_core.ask("is it sunny")
 
-    assert result == "It's sunny."
+    assert result["answer"] == "It's sunny."
+    assert result["tool_calls"] == [{"name": "get_weather", "args": {"when": "now"}}]
     fake_get_weather.assert_called_once_with(when="now")
     other_tool.assert_not_called()
 
@@ -100,7 +101,11 @@ def test_multiple_tool_calls_in_one_response_dispatch_to_correct_functions(monke
 
     result = agent_core.ask("weather and red line alerts?")
 
-    assert result == "Combined answer."
+    assert result["answer"] == "Combined answer."
+    assert result["tool_calls"] == [
+        {"name": "get_weather", "args": {"when": "now"}},
+        {"name": "get_service_alerts", "args": {"line": "RED"}},
+    ]
     fake_get_weather.assert_called_once_with(when="now")
     fake_get_alerts.assert_called_once_with(line="RED")
 
@@ -135,7 +140,11 @@ def test_sequential_tool_calls_across_multiple_rounds(monkeypatch):
 
     result = agent_core.ask("should I bike tomorrow")
 
-    assert result == "Final answer after two rounds."
+    assert result["answer"] == "Final answer after two rounds."
+    assert result["tool_calls"] == [
+        {"name": "get_weather", "args": {"when": "now"}},
+        {"name": "get_service_alerts", "args": {}},
+    ]
     assert mock_create.call_count == 3
     fake_get_weather.assert_called_once_with(when="now")
     fake_get_alerts.assert_called_once_with()
@@ -166,7 +175,10 @@ def test_max_iterations_forces_final_call_without_tools(monkeypatch):
 
     result = agent_core.ask("infinite loop question")
 
-    assert result == "Best effort answer."
+    assert result["answer"] == "Best effort answer."
+    assert result["tool_calls"] == [
+        {"name": "get_weather", "args": {"when": "now"}}
+    ] * agent_core.MAX_TOOL_ITERATIONS
     # MAX_TOOL_ITERATIONS calls inside the loop + 1 forced final call.
     assert fake_client.messages.create.call_count == agent_core.MAX_TOOL_ITERATIONS + 1
     assert fake_get_weather.call_count == agent_core.MAX_TOOL_ITERATIONS

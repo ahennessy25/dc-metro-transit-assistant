@@ -26,6 +26,9 @@ QUESTIONS = [
 if __name__ == "__main__":
     for i, question in enumerate(QUESTIONS, start=1):
         print(f"[{i}/{len(QUESTIONS)}] Q: {question}")
-        answer = ask(question)
-        print(f"A: {answer}")
+        result = ask(question)
+        if result["tool_calls"]:
+            for call in result["tool_calls"]:
+                print(f"    tool: {call['name']}({call['args']})")
+        print(f"A: {result['answer']}")
         print("-" * 80)
