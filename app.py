@@ -1,5 +1,57 @@
+import time
+from concurrent.futures import ThreadPoolExecutor
+
 import gradio as gr
 from agent.core import ask
+
+executor = ThreadPoolExecutor(max_workers=4)
+
+THINKING_FRAMES = [
+    "🔎 Thinking",
+    "🔎 Thinking.",
+    "🔎 Thinking..",
+    "🔎 Thinking...",
+]
+
+
+def friendly_error_message(error: Exception) -> str:
+    """Maps common failure types to a readable message instead of a raw traceback."""
+    error_text = str(error).lower()
+
+    if "api" in error_text and ("key" in error_text or "auth" in error_text or "401" in error_text):
+        return (
+            "⚠️ I'm having trouble authenticating with the assistant service. "
+            "This is likely a configuration issue — please let the app owner know."
+        )
+    if "rate" in error_text and "limit" in error_text:
+        return "⚠️ I'm getting a lot of requests right now. Please wait a moment and try again."
+    if "timeout" in error_text or "timed out" in error_text:
+        return "⚠️ That took too long to respond. Please try again — sometimes live transit data is slow to load."
+    if "connection" in error_text or "network" in error_text:
+        return "⚠️ I couldn't connect to the transit data service. Please check your connection and try again."
+
+    return (
+        "⚠️ Something went wrong while looking that up. "
+        "Please try rephrasing your question, or try again in a moment."
+    )
+
+
+def respond(message, history):
+    future = executor.submit(ask, message)
+
+    frame = 0
+    while not future.done():
+        yield THINKING_FRAMES[frame % len(THINKING_FRAMES)]
+        frame += 1
+        time.sleep(0.4)
+
+    try:
+        result = future.result()
+    except Exception as e:
+        yield friendly_error_message(e)
+        return
+
+    yield result["answer"]
 
 def _clean_history(history):
     """Strips Gradio's chat history dicts down to role/content only.
