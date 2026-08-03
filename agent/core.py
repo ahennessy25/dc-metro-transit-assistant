@@ -39,6 +39,15 @@ SYSTEM_PROMPT = (
 _client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 
+class ConfigurationError(Exception):
+    """Raised when the agent can't run due to missing/invalid local setup
+    (e.g. no ANTHROPIC_API_KEY), as opposed to a runtime failure from the
+    Anthropic API itself (auth rejected, rate limit, timeout, etc.). Kept
+    distinct so callers like app.py can show a specific "this deployment
+    isn't configured yet" message instead of a generic API-error message.
+    """
+
+
 def ask(user_question: str, conversation_history: list = None) -> dict:
     """Answers a question, executing tool calls (possibly several, possibly
     over several rounds) until Claude gives a final text-only answer.
@@ -52,7 +61,18 @@ def ask(user_question: str, conversation_history: list = None) -> dict:
     — tool_calls records every tool executed, in order, across all rounds,
     so a caller (or an eval harness) can see what the agent actually did,
     not just the resulting text.
+
+    Raises ConfigurationError immediately (no API call attempted) if
+    ANTHROPIC_API_KEY isn't set, rather than letting the Anthropic SDK fail
+    later with a generic "could not resolve authentication method" error.
     """
+    if not ANTHROPIC_API_KEY:
+        raise ConfigurationError(
+            "ANTHROPIC_API_KEY is not set. Add it to your .env file (see "
+            ".env.example) or, for a deployed Space, to your Space's "
+            "Settings -> Repository secrets."
+        )
+
     messages = list(conversation_history) if conversation_history else []
     messages.append({"role": "user", "content": user_question})
     tool_calls = []

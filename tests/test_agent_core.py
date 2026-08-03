@@ -10,7 +10,19 @@ import json
 from types import SimpleNamespace
 from unittest.mock import MagicMock
 
+import pytest
+
 import agent.core as agent_core
+
+
+@pytest.fixture(autouse=True)
+def _fake_api_key(monkeypatch):
+    """ask() now raises ConfigurationError up front when ANTHROPIC_API_KEY
+    is falsy (see agent/core.py), independent of whatever the real
+    environment/.env has set. These tests mock the client entirely, so they
+    shouldn't depend on a real key being present — patch in a fake one.
+    """
+    monkeypatch.setattr(agent_core, "ANTHROPIC_API_KEY", "test-key")
 
 
 def _text_block(text):
@@ -148,6 +160,17 @@ def test_sequential_tool_calls_across_multiple_rounds(monkeypatch):
     assert mock_create.call_count == 3
     fake_get_weather.assert_called_once_with(when="now")
     fake_get_alerts.assert_called_once_with()
+
+
+def test_missing_api_key_raises_configuration_error_without_calling_client(monkeypatch):
+    monkeypatch.setattr(agent_core, "ANTHROPIC_API_KEY", "")
+    fake_client = MagicMock()
+    monkeypatch.setattr(agent_core, "_client", fake_client)
+
+    with pytest.raises(agent_core.ConfigurationError, match="ANTHROPIC_API_KEY"):
+        agent_core.ask("when's the next train")
+
+    fake_client.messages.create.assert_not_called()
 
 
 def test_max_iterations_forces_final_call_without_tools(monkeypatch):
