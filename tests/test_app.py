@@ -6,7 +6,8 @@ error if passed through unchanged, so this only exercises the stripping
 logic in isolation — no live Anthropic API call, no ask() involved.
 """
 
-from app import _clean_history
+from agent.core import ConfigurationError
+from app import MAX_QUESTION_LENGTH, _clean_history, friendly_error_message, respond
 
 
 def test_strips_extra_keys_beyond_role_and_content():
@@ -60,3 +61,29 @@ def test_preserves_role_and_content_order_and_values_across_multiple_turns():
         "What about the Blue Line?",
         "Also running normally.",
     ]
+
+
+def test_respond_rejects_empty_message_without_calling_ask():
+    outputs = list(respond("   ", []))
+
+    assert len(outputs) == 1
+    assert "empty" in outputs[0].lower()
+
+
+def test_respond_rejects_overly_long_message_without_calling_ask():
+    too_long = "a" * (MAX_QUESTION_LENGTH + 1)
+
+    outputs = list(respond(too_long, []))
+
+    assert len(outputs) == 1
+    assert "long" in outputs[0].lower()
+
+
+def test_friendly_error_message_for_missing_api_key():
+    message = friendly_error_message(ConfigurationError("ANTHROPIC_API_KEY is not set."))
+    assert "not fully configured" in message.lower() or "api key is set" in message.lower()
+
+
+def test_friendly_error_message_for_low_credit_balance():
+    message = friendly_error_message(Exception("Your credit balance is too low to access the Anthropic API."))
+    assert "credit" in message.lower()
