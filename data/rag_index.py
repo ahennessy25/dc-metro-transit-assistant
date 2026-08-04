@@ -61,6 +61,37 @@ def build_index(entries: list[dict] | None = None, embedding_function=None):
     return collection
 
 
+def _get_existing_collection(client, **kwargs):
+    """Returns the named collection if it exists (populated or not), else None.
+
+    Single source of truth for "does this collection exist" so
+    search_station_info() and ensure_index_built() can't drift apart on how
+    they detect a missing collection.
+    """
+    try:
+        return client.get_collection(COLLECTION_NAME, **kwargs)
+    except NotFoundError:
+        return None
+
+
+def ensure_index_built() -> None:
+    """Builds the Chroma index if it isn't already present and populated.
+
+    `chroma_db/` is gitignored, so a fresh clone (e.g. a new Space deploy)
+    has no index on disk — without this, search_station_info() would silently
+    return "index hasn't been built yet" until someone ran build_index() by
+    hand. Skips the rebuild when a populated collection already exists so a
+    normal restart doesn't re-embed entries.json (and re-download the
+    embedding model) every time.
+    """
+    client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+    collection = _get_existing_collection(client)
+    if collection is not None and collection.count() > 0:
+        return
+
+    build_index()
+
+
 def search_station_info(query: str, n_results: int = 3, embedding_function=None) -> list[dict]:
     """Searches the RAG index for chunks relevant to `query`.
 
@@ -79,9 +110,8 @@ def search_station_info(query: str, n_results: int = 3, embedding_function=None)
     if embedding_function is not None:
         get_kwargs["embedding_function"] = embedding_function
 
-    try:
-        collection = client.get_collection(COLLECTION_NAME, **get_kwargs)
-    except NotFoundError:
+    collection = _get_existing_collection(client, **get_kwargs)
+    if collection is None:
         return [
             {
                 "text": "The station info index hasn't been built yet — run build_index() first.",
