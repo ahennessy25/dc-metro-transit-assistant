@@ -52,7 +52,6 @@ def friendly_error_message(error: Exception) -> str:
         "Please try rephrasing your question, or try again in a moment."
     )
 
-
 def _clean_history(history):
     """Strips Gradio's chat history dicts down to role/content only.
 
@@ -60,7 +59,6 @@ def _clean_history(history):
     beyond role/content; the Anthropic Messages API rejects unknown fields.
     """
     return [{"role": m["role"], "content": m["content"]} for m in history]
-
 
 def respond(message, history):
     stripped = (message or "").strip()

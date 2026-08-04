@@ -259,10 +259,13 @@ TOOL_SCHEMAS = [
             "Get currently active WMATA Metrorail service alerts — delays, single-tracking, "
             "station closures, and other disruptions — from the live GTFS-Realtime alerts "
             "feed. Optionally filter to a single line; omit to get all active alerts "
-            "systemwide. Use this for questions like 'is the Red Line running normally', 'are "
-            "there any delays', or 'is anything closed right now'. This is NOT for station "
-            "accessibility info like elevator outages history — use search_station_info for "
-            "that."
+            "systemwide. Use this both for line-specific status checks ('is the Red Line "
+            "running normally', 'are there any delays on the Blue Line') AND for general 'is "
+            "transit a good option right now' / mode-choice questions ('should I bike or take "
+            "the train', 'is it worth taking Metro today', 'any reason not to ride the train "
+            "right now') — active disruptions are exactly what would make transit a worse "
+            "choice than an alternative at this moment. This is NOT for station accessibility "
+            "info like elevator outage history — use search_station_info for that."
         ),
         "input_schema": {
             "type": "object",
@@ -309,13 +312,16 @@ TOOL_SCHEMAS = [
     {
         "name": "search_station_info",
         "description": (
-            "Semantic search over descriptive, non-live Metrorail text: station accessibility "
-            "notes (elevators, entrances, wheelchair access), historical service alert "
-            "descriptions, and trip-planning FAQ content (fares, bike policy, bus transfers). "
-            "This is NOT for live/current data — do NOT use this for current alerts, "
-            "arrivals, or weather; use get_service_alerts, get_real_time_arrivals, or "
-            "get_weather for those instead. Use this for questions like 'is there an elevator "
-            "at Dupont Circle' or 'how do Metrorail-to-bus transfers work'."
+            "Semantic search over descriptive, static Metrorail reference text that rarely "
+            "changes: station accessibility notes (elevators, entrances, wheelchair access), "
+            "historical service alert descriptions, and trip-planning FAQ content (fares, bike "
+            "policy, bus transfer rules). This is for looking up fixed facts and policies, NOT "
+            "for judging whether transit is currently a good choice or what's happening right "
+            "now — do NOT use this for current alerts, delays, arrivals, weather, or general "
+            "mode-choice questions like 'should I bike or take the train today'; use "
+            "get_service_alerts, get_real_time_arrivals, or get_weather for those instead. Use "
+            "this for questions like 'is there an elevator at Dupont Circle', 'can I bring my "
+            "bike on the train', or 'how do Metrorail-to-bus transfers work'."
         ),
         "input_schema": {
             "type": "object",
