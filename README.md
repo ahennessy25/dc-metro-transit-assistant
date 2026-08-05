@@ -1,3 +1,15 @@
+---
+title: DC Metro Transit Assistant
+emoji: 🚇
+colorFrom: blue
+colorTo: red
+sdk: gradio
+sdk_version: "5.0.0"
+python_version: "3.11"
+app_file: app.py
+pinned: false
+---
+
 # DC Metro Transit Assistant 🚇
 
 A conversational assistant for DC-area Metrorail (WMATA) — ask about schedules, live
