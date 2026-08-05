@@ -5,4 +5,7 @@ anthropic
 chromadb
 gtfs-realtime-bindings
 pytest
-gradio
+gradio==6.21.0
+gradio_client==2.6.0
+hf-gradio==0.4.1
+huggingface_hub==1.24.0
