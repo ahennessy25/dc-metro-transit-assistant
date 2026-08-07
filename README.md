@@ -1,5 +1,6 @@
 ---
 title: DC Metro Transit Assistant
+authors: Aidan Hennessy, Aditikrishna Mandula, Lec Quin and Akash Vora
 emoji: 🚇
 colorFrom: blue
 colorTo: red
