@@ -24,7 +24,7 @@ See [CLAUDE.md](CLAUDE.md) for the full architecture rationale and
 
 ## Live demo
 
-🔗 **[Try it on Hugging Face Spaces](https://huggingface.co/spaces/ahennessy25/dc-metro-transit-assistant)**
+🔗 **[Try it on Hugging Face Spaces](https://huggingface.co/spaces/coding-it-forward-dc-transit/dc-metro-transit-assistant)**
 
 The Space is currently private (hackathon-in-progress). Open an
 [issue on this repo](https://github.com/ahennessy25/dc-metro-transit-assistant/issues)
