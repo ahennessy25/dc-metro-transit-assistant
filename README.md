@@ -16,12 +16,14 @@ pinned: false
 A conversational assistant for DC-area Metrorail (WMATA) — ask about schedules, live
 arrivals, service alerts, station accessibility, and weather in plain English.
 
-Built as a 3-week hackathon project for Coding It Forward. The architecture is hybrid
+Built as a hackathon project for Coding It Forward. The architecture is hybrid
 tool-calling + RAG: time-sensitive data (schedules, live arrivals, alerts, weather) is
 answered via live tool calls, while descriptive/semi-static content (station
 accessibility notes, FAQs) is answered via semantic retrieval over a ChromaDB index.
 See [CLAUDE.md](CLAUDE.md) for the full architecture rationale and
 [DECISIONS.md](DECISIONS.md) for a log of notable design decisions.
+
+## Architecture  ![Architecture diagram: user, Gradio chat UI, agent loop, live tool-calling, and RAG retrieval](architecture-diagram.png)
 
 ## Live demo
 
