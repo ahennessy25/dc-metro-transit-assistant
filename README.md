@@ -29,9 +29,7 @@ See [CLAUDE.md](CLAUDE.md) for the full architecture rationale and
 
 ## Demo
 
-Open an
-[issue on this repo](https://github.com/ahennessy25/dc-metro-transit-assistant/issues)
-requesting access.
+A live demo on Hugging Face Spaces is private. To request access, open an [issue on this repo](https://github.com/ahennessy25/dc-metro-transit-assistant/issues) requesting access.
 
 ## Features
 
