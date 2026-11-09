@@ -23,13 +23,13 @@ accessibility notes, FAQs) is answered via semantic retrieval over a ChromaDB in
 See [CLAUDE.md](CLAUDE.md) for the full architecture rationale and
 [DECISIONS.md](DECISIONS.md) for a log of notable design decisions.
 
-## Architecture  ![Architecture diagram: user, Gradio chat UI, agent loop, live tool-calling, and RAG retrieval](architecture-diagram.png)
+## Architecture  
 
-## Live demo
+![Architecture diagram: user, Gradio chat UI, agent loop, live tool-calling, and RAG retrieval](architecture-diagram.png)
 
-🔗 **[Try it on Hugging Face Spaces](https://huggingface.co/spaces/coding-it-forward-dc-transit/dc-metro-transit-assistant)**
+## Demo
 
-The Space is currently private (hackathon-in-progress). Open an
+Open an
 [issue on this repo](https://github.com/ahennessy25/dc-metro-transit-assistant/issues)
 requesting access.
 
