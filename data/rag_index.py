@@ -1,11 +1,18 @@
 """Builds the ChromaDB index over descriptive Metrorail text (accessibility
 notes, alert history, trip-planning FAQ) from data/rag_sources/entries.json.
 
-Each entry is already a short, discrete fact, so it's indexed as one chunk
-with no further splitting. Uses Chroma's default embedding function.
+entries.json can hold rows in two shapes:
+  - a ready-made chunk: {text, station, type, source} — indexed as-is.
+  - a merged station entry from compile_sources.py's live WMATA pipeline:
+    {code, codes, name, lines, address, lat, lon, entrances} — expanded by
+    _generate_chunks() into a station_info chunk and an accessibility chunk,
+    both in the same {text, station, type, source} shape.
+Either way, each resulting chunk is indexed as one unit with no further
+splitting. Uses Chroma's default embedding function.
 """
 
 import json
+import re
 from pathlib import Path
 
 import chromadb
@@ -16,9 +23,105 @@ from config import CHROMA_DB_DIR
 ENTRIES_PATH = Path(__file__).parent / "rag_sources" / "entries.json"
 COLLECTION_NAME = "wmata_station_info"
 
+LINE_NAMES = {
+    "RD": "Red",
+    "BL": "Blue",
+    "OR": "Orange",
+    "SV": "Silver",
+    "GR": "Green",
+    "YL": "Yellow",
+}
+
+_ELEVATOR_SUFFIX_RE = re.compile(r"\s*\(elevator\)\s*$", re.IGNORECASE)
+
 
 def _load_entries() -> list[dict]:
     return json.loads(ENTRIES_PATH.read_text(encoding="utf-8"))
+
+
+def _join_with_and(items: list[str]) -> str:
+    if len(items) <= 1:
+        return "".join(items)
+    if len(items) == 2:
+        return f"{items[0]} and {items[1]}"
+    return ", ".join(items[:-1]) + f", and {items[-1]}"
+
+
+def _strip_elevator_suffix(name: str) -> str:
+    """Drops a trailing "(ELEVATOR)" tag from an entrance name — redundant
+    once the surrounding sentence already says "elevator entrance".
+    """
+    return _ELEVATOR_SUFFIX_RE.sub("", name).strip()
+
+
+def _station_info_chunk(station: dict) -> dict:
+    """General station_info chunk: name, lines served, and address."""
+    line_names = [LINE_NAMES.get(code, code) for code in station["lines"]]
+    line_word = "line" if len(line_names) == 1 else "lines"
+    text = (
+        f"{station['name']} station serves the {_join_with_and(line_names)} {line_word}. "
+        f"Located at {station['address']}."
+    )
+    return {
+        "text": text,
+        "station": station["code"],
+        "type": "station_info",
+        "source": "wmata_jstations",
+    }
+
+
+def _accessibility_chunk(station: dict) -> dict:
+    """Elevator-accessibility chunk — explicit even when a station has zero
+    elevator entrances, so search_station_info() can give a real "no
+    elevator access" answer instead of silence.
+    """
+    entrances = station["entrances"]
+    elevators = [e for e in entrances if e["is_elevator"]]
+    non_elevators = [e for e in entrances if not e["is_elevator"]]
+
+    if not entrances:
+        text = f"{station['name']} has no entrance data available."
+    elif not elevators:
+        entrance_word = "entrance" if len(entrances) == 1 else "entrances"
+        verb = "has" if len(entrances) == 1 else "have"
+        text = (
+            f"{station['name']} has no elevator entrances. "
+            f"None of its {len(entrances)} {entrance_word} {verb} an elevator."
+        )
+    else:
+        elevator_word = "entrance" if len(elevators) == 1 else "entrances"
+        elevator_names = _join_with_and([_strip_elevator_suffix(e["name"]) for e in elevators])
+        text = f"{station['name']} has {len(elevators)} elevator {elevator_word}: {elevator_names}."
+        if non_elevators:
+            other_names = _join_with_and([e["name"] for e in non_elevators])
+            text += f" Other entrances ({other_names}) do not have elevators."
+        else:
+            text += " All entrances have elevators."
+
+    return {
+        "text": text,
+        "station": station["code"],
+        "type": "accessibility",
+        "source": "wmata_jstationentrances",
+    }
+
+
+def _generate_chunks(raw_entry: dict) -> list[dict]:
+    """Expands one raw entries.json row into one or more RAG-indexable
+    chunks of the {text, station, type, source} shape.
+
+    A row that's already in that shape (has "text") is a ready-made chunk
+    and passes through unchanged — this is how non-station content types
+    (FAQ, alert history, etc., if/when reintroduced) stay indexed without
+    any change here. A merged station entry from compile_sources.py (has
+    "entrances") expands into a station_info chunk and an accessibility
+    chunk.
+    """
+    if "text" in raw_entry:
+        return [raw_entry]
+    if "entrances" in raw_entry:
+        return [_station_info_chunk(raw_entry), _accessibility_chunk(raw_entry)]
+    raise ValueError(f"Unrecognized entries.json row shape: {sorted(raw_entry)}")
 
 
 def build_index(entries: list[dict] | None = None, embedding_function=None):
@@ -35,6 +138,8 @@ def build_index(entries: list[dict] | None = None, embedding_function=None):
     if entries is None:
         entries = _load_entries()
 
+    chunks = [chunk for entry in entries for chunk in _generate_chunks(entry)]
+
     client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
     existing_collections = {c.name for c in client.list_collections()}
     if COLLECTION_NAME in existing_collections:
@@ -44,18 +149,18 @@ def build_index(entries: list[dict] | None = None, embedding_function=None):
         create_kwargs["embedding_function"] = embedding_function
     collection = client.create_collection(COLLECTION_NAME, **create_kwargs)
 
-    if entries:
+    if chunks:
         collection.add(
-            documents=[entry["text"] for entry in entries],
+            documents=[chunk["text"] for chunk in chunks],
             metadatas=[
                 {
-                    "station": entry.get("station") or "",
-                    "type": entry["type"],
-                    "source": entry["source"],
+                    "station": chunk.get("station") or "",
+                    "type": chunk["type"],
+                    "source": chunk["source"],
                 }
-                for entry in entries
+                for chunk in chunks
             ],
-            ids=[f"entry-{i}" for i in range(len(entries))],
+            ids=[f"entry-{i}" for i in range(len(chunks))],
         )
 
     return collection

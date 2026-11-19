@@ -1,68 +1,3457 @@
 [
   {
-    "text": "PLACEHOLDER: Metro Center has elevator access from street level to the mezzanine and from the mezzanine to both the Red Line and Blue/Orange/Silver Line platforms. All entrances are accessible.",
-    "station": "Metro Center",
-    "type": "accessibility",
-    "source": "WMATA station accessibility guide (placeholder)"
+    "code": "A01",
+    "codes": [
+      "A01",
+      "C01"
+    ],
+    "name": "Metro Center",
+    "lat": 38.898303,
+    "lon": -77.028099,
+    "lines": [
+      "BL",
+      "OR",
+      "RD",
+      "SV"
+    ],
+    "address": "607 13th St. NW, Washington, DC 20005",
+    "entrances": [
+      {
+        "name": "11TH ST NW & G ST NW",
+        "description": "Building Entrance from the southeast corner of 11th St NW and G St NW.",
+        "lat": 38.898073,
+        "lon": -77.026789,
+        "is_elevator": false
+      },
+      {
+        "name": "13TH ST NW & G ST NW",
+        "description": "Building Entrance from the southeast corner of 13th St NW and G St NW.",
+        "lat": 38.898026,
+        "lon": -77.029379,
+        "is_elevator": false
+      },
+      {
+        "name": "ENTRANCE FROM MACY'S",
+        "description": "Building entrance from west mezzanine to Macy's entrance.",
+        "lat": 38.898433,
+        "lon": -77.029402,
+        "is_elevator": false
+      },
+      {
+        "name": "GRANT HYATT HOTEL",
+        "description": "Building entrance from east mezzanine to Grand Hyatt Hotel entrance.",
+        "lat": 38.898365,
+        "lon": -77.026683,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST NW & G ST NW (ELEVATOR)",
+        "description": "Street level elevator at 12th St NW segment between G St NW and H St NW.",
+        "lat": 38.89892,
+        "lon": -77.027914,
+        "is_elevator": true
+      },
+      {
+        "name": "12TH ST NW & F ST NW",
+        "description": "Escalator to station from the building located at the southeast corner of 12th St NW and F St NW.",
+        "lat": 38.897147,
+        "lon": -77.028567,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST NW & G ST NW",
+        "description": "Escalator to station from northeast corner of 12th St NW and G St NW.",
+        "lat": 38.898498,
+        "lon": -77.027903,
+        "is_elevator": false
+      },
+      {
+        "name": "ENTRANCE FROM MACY'S",
+        "description": "Building entrance from north mezzanine to Macy's entrance.",
+        "lat": 38.898985,
+        "lon": -77.028228,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Union Station has a street-level elevator at the main entrance and platform elevators serving the Red Line. Escalator outages are common during peak commuter rail transfer times.",
-    "station": "Union Station",
-    "type": "accessibility",
-    "source": "WMATA station accessibility guide (placeholder)"
+    "code": "A02",
+    "codes": [
+      "A02"
+    ],
+    "name": "Farragut North",
+    "lat": 38.903192,
+    "lon": -77.039766,
+    "lines": [
+      "RD"
+    ],
+    "address": "1001 Connecticut Avenue NW, Washington, DC 20036",
+    "entrances": [
+      {
+        "name": "CONNECTICUT AVE NW & K ST NW (ELEVATOR)",
+        "description": "Elevator entrance from Connecticut Ave NW",
+        "lat": 38.903021,
+        "lon": -77.039314,
+        "is_elevator": true
+      },
+      {
+        "name": "CONNECTICUT AVE NW & K ST NW",
+        "description": "Building entrance from the northeast corner of Connecticut Ave NW and K St NW.",
+        "lat": 38.902767,
+        "lon": -77.039121,
+        "is_elevator": false
+      },
+      {
+        "name": "CONNECTICUT AVE NW & L ST NW (EAST)",
+        "description": "Building entrance from the northeast corner of L St NW and Connecticut Ave NW. (Escalator Only)",
+        "lat": 38.903925,
+        "lon": -77.039787,
+        "is_elevator": false
+      },
+      {
+        "name": "CONNECTICUT AVE NW & L ST NW (WEST)",
+        "description": "Building entrance from the southwest corner of L St NW and Connecticut Ave NW. (Escalator Only)",
+        "lat": 38.903525,
+        "lon": -77.040186,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Dupont Circle's south entrance (19th St) has no elevator; wheelchair users should use the north entrance (Q St), which has full elevator access to the platform.",
-    "station": "Dupont Circle",
-    "type": "accessibility",
-    "source": "WMATA station accessibility guide (placeholder)"
+    "code": "A03",
+    "codes": [
+      "A03"
+    ],
+    "name": "Dupont Circle",
+    "lat": 38.909499,
+    "lon": -77.04362,
+    "lines": [
+      "RD"
+    ],
+    "address": "1525 20th St. NW, Washington, DC 20036",
+    "entrances": [
+      {
+        "name": "Q ST NW & CONNECTICUT AVE NW (ELEVATOR)",
+        "description": "Street level elevator at north side of the station is accessible from Connecticut Ave NW, 20th NW and Q St NW.",
+        "lat": 38.910792,
+        "lon": -77.044553,
+        "is_elevator": true
+      },
+      {
+        "name": "19TH ST NW & CONNECTICUT AVE NW",
+        "description": "Canopied entrance from 19th St NW and is also accessible from Connecticut Ave NW.",
+        "lat": 38.908648,
+        "lon": -77.043322,
+        "is_elevator": false
+      },
+      {
+        "name": "Q ST NW & 20TH ST NW",
+        "description": "North side station entrance is located at the southeast corner of 20th NW and Q St NW and accessible from Connecticut Ave NW.",
+        "lat": 38.911001,
+        "lon": -77.044746,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Gallery Place-Chinatown has elevator access at all entrances and between both the Red Line and Green/Yellow Line platforms, though transfers require exiting fare gates at street level during certain elevator outages.",
-    "station": "Gallery Place-Chinatown",
-    "type": "accessibility",
-    "source": "WMATA station accessibility guide (placeholder)"
+    "code": "A04",
+    "codes": [
+      "A04"
+    ],
+    "name": "Woodley Park-Zoo/Adams Morgan",
+    "lat": 38.924999,
+    "lon": -77.052648,
+    "lines": [
+      "RD"
+    ],
+    "address": "2700 Connecticut Ave., NW, Washington, DC 20008",
+    "entrances": [
+      {
+        "name": "WOODLEY RD NW & CONNECTICUT AVE NW (ELEVATOR)",
+        "description": "Street level elevator from the southwest corner of Woodley Rd NW and Connecticut Ave NW.",
+        "lat": 38.925435,
+        "lon": -77.052876,
+        "is_elevator": true
+      },
+      {
+        "name": "CONNECTICUT AVE NW & 24TH ST NW",
+        "description": "Station entrance from southwest corner of Connecticut Ave NW and 24th St NW.",
+        "lat": 38.924461,
+        "lon": -77.05236,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Rosslyn has a single long escalator bank and one elevator connecting the mezzanine to the platform; the elevator is the only accessible path when escalators are under maintenance.",
-    "station": "Rosslyn",
-    "type": "accessibility",
-    "source": "WMATA station accessibility guide (placeholder)"
+    "code": "A05",
+    "codes": [
+      "A05"
+    ],
+    "name": "Cleveland Park",
+    "lat": 38.934703,
+    "lon": -77.058226,
+    "lines": [
+      "RD"
+    ],
+    "address": "3599 Connecticut Avenue NW, Washington, DC 20008",
+    "entrances": [
+      {
+        "name": "CONNECTICUT AVE NW & ORDWAY ST NW (ELEVATOR)",
+        "description": "Elevator entrance from northeast corner of Connecticut Ave NW and Ordway St NW.",
+        "lat": 38.935771,
+        "lon": -77.058431,
+        "is_elevator": true
+      },
+      {
+        "name": "CONNECTICUT AVE NW & ORDWAY ST NW",
+        "description": "Canopied escalator and stairway entrance on east side of Connecticut Ave NW, between Ordway St NW and Porter St NW.",
+        "lat": 38.935916,
+        "lon": -77.05851,
+        "is_elevator": false
+      },
+      {
+        "name": "CONNECTICUT AVE NW & PORTER ST NW",
+        "description": "Canopied escalator and stairway entrance on west side of Connecticut Ave NW, between Ordway St NW and Porter St NW.",
+        "lat": 38.936203,
+        "lon": -77.059041,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Single-tracking between Metro Center and Gallery Place-Chinatown on the Red Line due to weekend track maintenance, resulting in delays of up to 15 minutes.",
-    "station": "Metro Center",
-    "type": "alert_history",
-    "source": "WMATA MetroAlerts archive (placeholder)"
+    "code": "A06",
+    "codes": [
+      "A06"
+    ],
+    "name": "Van Ness-UDC",
+    "lat": 38.94362,
+    "lon": -77.063511,
+    "lines": [
+      "RD"
+    ],
+    "address": "4200 Connecticut Ave NW, Washington, DC 20008",
+    "entrances": [
+      {
+        "name": "CONNECTICUT AVE NW & VEAZEY TERR NW (ELEVATOR)",
+        "description": "Street level elevator at southwest corner of Connecticut Ave NW and Veazey Terrace NW.",
+        "lat": 38.943969,
+        "lon": -77.063576,
+        "is_elevator": true
+      },
+      {
+        "name": "CONNECTICUT AVE NW & VEAZEY TERR NW (EAST)",
+        "description": "Station entrance from the northeast corner of Connecticut Ave NW and Veazey Terrace NW.",
+        "lat": 38.944623,
+        "lon": -77.063569,
+        "is_elevator": false
+      },
+      {
+        "name": "CONNECTICUT AVE NW & VEAZEY TERR NW (WEST)",
+        "description": "Station entrance from the northwest corner of Connecticut Ave NW and Veazey Terrace NW.",
+        "lat": 38.944532,
+        "lon": -77.064027,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Elevator at the Q St entrance to Dupont Circle was out of service for approximately two weeks for a scheduled motor replacement.",
-    "station": "Dupont Circle",
-    "type": "alert_history",
-    "source": "WMATA MetroAlerts archive (placeholder)"
+    "code": "A07",
+    "codes": [
+      "A07"
+    ],
+    "name": "Tenleytown-AU",
+    "lat": 38.947808,
+    "lon": -77.079615,
+    "lines": [
+      "RD"
+    ],
+    "address": "4501 Wisconsin Ave NW, Washington, DC 20016",
+    "entrances": [
+      {
+        "name": "WISCONSIN AVE NW & ALBEMARLE ST NW (ELEVATOR)",
+        "description": "Street level elevator at the northeast corner of Albemarle St NW and Wisconsin Ave NW (next to Sears and Whole Foods).",
+        "lat": 38.948099,
+        "lon": -77.07927,
+        "is_elevator": true
+      },
+      {
+        "name": "WISCONSIN AVE NW & ALBEMARLE ST NW (EAST)",
+        "description": "Station entrance from the northeast corner of Albemarle St NW and Wisconsin Ave NW.",
+        "lat": 38.948078,
+        "lon": -77.079358,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE NW & ALBEMARLE ST NW (WEST)",
+        "description": "Building entrance from west side of Wisconsin Ave segment between River Rd NW and Albemarle St NW( Next to Best Buy).",
+        "lat": 38.948309,
+        "lon": -77.080166,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Systemwide reduced service on a federal holiday, with trains running on a weekend schedule across all six lines.",
-    "station": null,
-    "type": "alert_history",
-    "source": "WMATA MetroAlerts archive (placeholder)"
+    "code": "A08",
+    "codes": [
+      "A08"
+    ],
+    "name": "Friendship Heights",
+    "lat": 38.960744,
+    "lon": -77.085969,
+    "lines": [
+      "RD"
+    ],
+    "address": "5337 Wisconsin Avenue NW, Washington, DC 20015",
+    "entrances": [
+      {
+        "name": "WISCONSIN AVE NW & JENIFER ST NW",
+        "description": "Elevator entrance to station from southwest corner of Jenifer St NW and Wisconsin Ave NW.",
+        "lat": 38.958508,
+        "lon": -77.085009,
+        "is_elevator": true
+      },
+      {
+        "name": "WISCONSIN AVE NW & WESTERN AVE NW (ELEVATOR)",
+        "description": "Elevator entrance to station from east side of Wisconsin Ave NW.",
+        "lat": 38.960219,
+        "lon": -77.085197,
+        "is_elevator": true
+      },
+      {
+        "name": "EMBASSY SUITES/ CHEVY CHASE PAVILION ENTRANCE",
+        "description": "Station entrance from Chevy Chase Pavilion.",
+        "lat": 38.960736,
+        "lon": -77.085403,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE NW & WESTERN AVE NW ( SE CORNER)",
+        "description": "Station entrance from Wisconsin Place parking garage.",
+        "lat": 38.960777,
+        "lon": -77.086223,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE NW & WESTERN AVE NW (WEST)",
+        "description": "Canopied entrance from the northwest corner of Western Ave and Wisconsin Ave NW.",
+        "lat": 38.960955,
+        "lon": -77.086051,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE NW & WESTERN AVE NW (EAST)",
+        "description": "Station entrance from the northeast corner of Western Ave and Wisconsin Ave (Entrance escalator accessible from bus terminal) .",
+        "lat": 38.961271,
+        "lon": -77.085628,
+        "is_elevator": false
+      },
+      {
+        "name": "MAZZA GALLERIE BUILDING ENTRANCE",
+        "description": "Entrance from Mazza Galleries (not WMATA)",
+        "lat": 38.960516,
+        "lon": -77.085815,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: SmarTrip fares are calculated by distance traveled and time of day; peak fares apply on weekdays roughly 5-9:30am and 3-7pm, with off-peak (lower) fares at all other times.",
-    "station": null,
-    "type": "faq",
-    "source": "WMATA trip-planning FAQ (placeholder)"
+    "code": "A09",
+    "codes": [
+      "A09"
+    ],
+    "name": "Bethesda",
+    "lat": 38.984282,
+    "lon": -77.094431,
+    "lines": [
+      "RD"
+    ],
+    "address": "800 North Ln, Bethesda, MD 20814",
+    "entrances": [
+      {
+        "name": "WISCONSIN AVE & MONTGOMERY LN (ELEVATOR)",
+        "description": "Elevator entrance from northwest corner of Wisconsin Ave and Montgomery Ln.",
+        "lat": 38.9836,
+        "lon": -77.094155,
+        "is_elevator": true
+      },
+      {
+        "name": "EDGEMOOR LN (BUSBAY)",
+        "description": "Entrance from bus bay (intermediate level)",
+        "lat": 38.984424,
+        "lon": -77.094612,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE & EAST WEST HWY UNDERPASS",
+        "description": "Building entrance to tunnel to station located at southeast corner of Wisconsin Ave and East-West Hwy.",
+        "lat": 38.984564,
+        "lon": -77.094036,
+        "is_elevator": false
+      },
+      {
+        "name": "WISCONSIN AVE & OLD GEORGETOWN RD",
+        "description": "Escalator entrance from southwest corner of Wisconsin Ave and Old Georgetown Rd.",
+        "lat": 38.984693,
+        "lon": -77.094645,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Bikes are permitted on Metrorail at all times except during designated peak-hour restrictions on certain lines; folding bikes are always allowed.",
-    "station": null,
-    "type": "faq",
-    "source": "WMATA trip-planning FAQ (placeholder)"
+    "code": "A10",
+    "codes": [
+      "A10"
+    ],
+    "name": "Medical Center",
+    "lat": 38.999947,
+    "lon": -77.097253,
+    "lines": [
+      "RD"
+    ],
+    "address": "8810 Rockville Pike, Bethesda, MD 20814",
+    "entrances": [
+      {
+        "name": "ROCKVILLE PIKE & SOUTH DR (ELEVATOR)",
+        "description": "Street level elevator is accessible by the sidewalks from Bethesda Trolley Trial and from bus bay area.",
+        "lat": 38.999176,
+        "lon": -77.09711,
+        "is_elevator": true
+      },
+      {
+        "name": "ROCKVILLE PIKE & SOUTH DR (ELEVATOR)",
+        "description": "Street level elevator is accessible by the sidewalks from Bethesda Trolley Trial and from walter reed medical center",
+        "lat": 38.999205,
+        "lon": -77.096638,
+        "is_elevator": true
+      },
+      {
+        "name": "ROCKVILLE PIKE & SOUTH DR",
+        "description": "Canopied entrance from the south side of bus bay area located southwest corner of Bethesda Trolley Trial and South Dr.",
+        "lat": 38.999059,
+        "lon": -77.097887,
+        "is_elevator": false
+      }
+    ]
   },
   {
-    "text": "PLACEHOLDER: Free transfers between Metrorail and Metrobus are available within a set time window when paying with the same SmarTrip card.",
-    "station": null,
-    "type": "faq",
-    "source": "WMATA trip-planning FAQ (placeholder)"
+    "code": "A11",
+    "codes": [
+      "A11"
+    ],
+    "name": "Grosvenor-Strathmore",
+    "lat": 39.029158,
+    "lon": -77.10415,
+    "lines": [
+      "RD"
+    ],
+    "address": "5301 Tuckerman Ln, North Bethesda, MD 20852",
+    "entrances": [
+      {
+        "name": "GROSVENOR PL & TUCKERMAN LN (TUNNEL)",
+        "description": "Passageway from east of Grosvenor Pl goes under Rockville pike to the escalator to the station.",
+        "lat": 39.028705,
+        "lon": -77.104319,
+        "is_elevator": false
+      },
+      {
+        "name": "METRO PARKING LOT CUT & TUCKERMAN LN",
+        "description": "Facility entrance by the walkway from bus bay, parking lot and kiss&ride area located at the northwest corner of Strathmore Park Ct and Tuckerman Ln.",
+        "lat": 39.028917,
+        "lon": -77.103615,
+        "is_elevator": false
+      },
+      {
+        "name": "ROCKVILLE PIKE & TUCKERMAN LN",
+        "description": "Station entrance accessible by the sidewalks from Rockville Pike northbound.",
+        "lat": 39.028859,
+        "lon": -77.10381,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "A12",
+    "codes": [
+      "A12"
+    ],
+    "name": "North Bethesda",
+    "lat": 39.048043,
+    "lon": -77.113131,
+    "lines": [
+      "RD"
+    ],
+    "address": "10000 Citadel Ave, North Bethesda, MD 20852",
+    "entrances": [
+      {
+        "name": "MARINELLI RD & ROCKVILLE PIKE",
+        "description": "Station entrance from the northeast corner of Rockville Pike and Marinelli Rd.",
+        "lat": 39.047492,
+        "lon": -77.112572,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "A13",
+    "codes": [
+      "A13"
+    ],
+    "name": "Twinbrook",
+    "lat": 39.062359,
+    "lon": -77.121113,
+    "lines": [
+      "RD"
+    ],
+    "address": "1600 Chapman Ave, Rockville, MD 20852",
+    "entrances": [
+      {
+        "name": "CHAPMAN AVE & BOUIC AVE",
+        "description": "West side entrance from bus bay, kiss&ride and parking lot located northeast corner of Chapman Ave and Bouic Ave.",
+        "lat": 39.062126,
+        "lon": -77.1207,
+        "is_elevator": false
+      },
+      {
+        "name": "PARKLAWN DR & WICOMICO AVE (TUNNEL)",
+        "description": "Passageway from east side of the station is accessible by bus bay, kiss&ride and parking lot located east of Parklawn Dr and Twinbrook Pkwy.",
+        "lat": 39.062333,
+        "lon": -77.120405,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "A14",
+    "codes": [
+      "A14"
+    ],
+    "name": "Rockville",
+    "lat": 39.084215,
+    "lon": -77.146424,
+    "lines": [
+      "RD"
+    ],
+    "address": "251 Hungerford Dr, Rockville, MD 20850",
+    "entrances": [
+      {
+        "name": "PARK RD & ROCKVILLE PIKE",
+        "description": "Station west side entrance is accessible from bus bay, metered parking located southeast of Park Rd/ Rockville Pike.",
+        "lat": 39.084471,
+        "lon": -77.146574,
+        "is_elevator": false
+      },
+      {
+        "name": "PARK RD & ROCKVILLE PIKE",
+        "description": "Station west side entrance is accessible from the pedestrian bridge originates from the Montgomery County Office buildings and Monroe Street",
+        "lat": 39.084086,
+        "lon": -77.147888,
+        "is_elevator": false
+      },
+      {
+        "name": "S STONESTREET AVE & PARK RD (TUNNEL)",
+        "description": "Passageway to station east side is accessible from park&ride and bus bay located at the southwest corner of S.Stonestreet Ave/Park Rd and from the sidewalks from Park Road.",
+        "lat": 39.084676,
+        "lon": -77.146276,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "A15",
+    "codes": [
+      "A15"
+    ],
+    "name": "Shady Grove",
+    "lat": 39.119819,
+    "lon": -77.164921,
+    "lines": [
+      "RD"
+    ],
+    "address": "215903 Somerville Dr, Rockville, MD 20855",
+    "entrances": [
+      {
+        "name": "SOMERVILLE DR & REDLAND RD (ELEVATOR)",
+        "description": "Street level elevator to station is located next to west side escalator and is accessible from bus bay and parking lot.",
+        "lat": 39.120076,
+        "lon": -77.165004,
+        "is_elevator": true
+      },
+      {
+        "name": "SOMERVILLE DR & REDLAND RD",
+        "description": "West side station entrance from bus bay and parking lot is located east of Somerville Dr.",
+        "lat": 39.119939,
+        "lon": -77.16501,
+        "is_elevator": false
+      },
+      {
+        "name": "CRABBS BRANCH WAY & REDLAND RD (TUNNEL)",
+        "description": "Passageway from east side of the station accessible from bus bay and parking garage located northwest corner of Crabbs Branch Way and Redland Rd.",
+        "lat": 39.120423,
+        "lon": -77.164433,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B01",
+    "codes": [
+      "B01",
+      "F01"
+    ],
+    "name": "Gallery Pl-Chinatown",
+    "lat": 38.89834,
+    "lon": -77.021851,
+    "lines": [
+      "GR",
+      "RD",
+      "YL"
+    ],
+    "address": "630 H St. NW, Washington, DC 20001",
+    "entrances": [
+      {
+        "name": "9TH ST NW & G ST NW",
+        "description": "Station entrance located at the southeast corner of 9th St NW and G St NW.",
+        "lat": 38.898048,
+        "lon": -77.023763,
+        "is_elevator": false
+      },
+      {
+        "name": "7TH ST NW & F ST NW",
+        "description": "Station entrance from Verizon center, located at the northeast corner of F St NW and 7th St NW.",
+        "lat": 38.897574,
+        "lon": -77.021681,
+        "is_elevator": false
+      },
+      {
+        "name": "7TH ST NW & F ST NW (ELEVATOR)",
+        "description": "Elevator from Verizon Center, located at east of 7th St NW.",
+        "lat": 38.897926,
+        "lon": -77.021729,
+        "is_elevator": true
+      },
+      {
+        "name": "7TH ST NW & H ST NW",
+        "description": "Station entrance from the southeast corner of 7th St NW and H St NW.",
+        "lat": 38.89963,
+        "lon": -77.02156,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B02",
+    "codes": [
+      "B02"
+    ],
+    "name": "Judiciary Square",
+    "lat": 38.896084,
+    "lon": -77.016643,
+    "lines": [
+      "RD"
+    ],
+    "address": "450 F Street NW, Washington, DC 20001",
+    "entrances": [
+      {
+        "name": "4TH ST NW & F ST NW (ELEVATOR)",
+        "description": "Street level elevator to station platform( to Shady Grove) is located between F St NW and E St NW.",
+        "lat": 38.896824,
+        "lon": -77.017453,
+        "is_elevator": true
+      },
+      {
+        "name": "5TH ST NW & E ST NW (ELEVATOR)",
+        "description": "Street level elevator to station platform( to Glenmont) is located between F St NW and E St NW.",
+        "lat": 38.896652,
+        "lon": -77.017649,
+        "is_elevator": true
+      },
+      {
+        "name": "4TH ST NW & D ST NW",
+        "description": "Station entrance from 4th St NW segment between F St NW and E St NW.",
+        "lat": 38.895222,
+        "lon": -77.016,
+        "is_elevator": false
+      },
+      {
+        "name": "5TH ST NW & F ST NW",
+        "description": "Station entrance from F St NW located across from national building museum.",
+        "lat": 38.897178,
+        "lon": -77.017559,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B03",
+    "codes": [
+      "B03"
+    ],
+    "name": "Union Station",
+    "lat": 38.897723,
+    "lon": -77.006745,
+    "lines": [
+      "RD"
+    ],
+    "address": "701 First St. NE, Washington, DC 20002",
+    "entrances": [
+      {
+        "name": "1ST ST NE & G ST NE (AMTRAK/MARC/VRE)",
+        "description": "Elevator entrance from the passageway to AMTRAK, MARC, VRE TRAINS",
+        "lat": 38.89845,
+        "lon": -77.006995,
+        "is_elevator": true
+      },
+      {
+        "name": "1ST ST NE & G ST NE (AMTRAK/MARC/VRE)",
+        "description": "Escalator entrance from the passageway to AMTRAK, MARC, VRE TRAINS",
+        "lat": 38.898541,
+        "lon": -77.006984,
+        "is_elevator": false
+      },
+      {
+        "name": "1ST ST NE & MASSACHUSETTS AVE NE",
+        "description": "Station entrance from 1st St NE to southeast corner of the Union station building.",
+        "lat": 38.897563,
+        "lon": -77.007198,
+        "is_elevator": false
+      },
+      {
+        "name": "1ST ST NE & G ST NE",
+        "description": "Station entrance from northeast corner of Massachusetts Ave NE and 1st NE.",
+        "lat": 38.898393,
+        "lon": -77.00726,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B04",
+    "codes": [
+      "B04"
+    ],
+    "name": "Rhode Island Ave-Brentwood",
+    "lat": 38.920741,
+    "lon": -76.995984,
+    "lines": [
+      "RD"
+    ],
+    "address": "2300 Washington Pl NE, Washington, DC 20018",
+    "entrances": [
+      {
+        "name": "RHODE ISLAND AVE NE & WASHINGTON PL NE",
+        "description": "Station entrance is accessible from bus bay,parking lot and kiss&ride area located south of Rhode Island Ave NE and Reed St NE.",
+        "lat": 38.920505,
+        "lon": -76.996104,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B05",
+    "codes": [
+      "B05"
+    ],
+    "name": "Brookland-CUA",
+    "lat": 38.933234,
+    "lon": -76.994544,
+    "lines": [
+      "RD"
+    ],
+    "address": "801 Michigan Ave NE, Washington, DC 20017",
+    "entrances": [
+      {
+        "name": "9TH ST NE & MONROE ST NE (ELEVATOR)",
+        "description": "Elevator entrance from northwest corner of bus bay and from Bunker Hill Rd NE.",
+        "lat": 38.933748,
+        "lon": -76.994427,
+        "is_elevator": true
+      },
+      {
+        "name": "9TH ST NE & MONROE ST NE",
+        "description": "Escalator and stairway entrance from bus bay at 9th St NE between Bunker Hill Rd NE and Monroe St NE.",
+        "lat": 38.933504,
+        "lon": -76.994341,
+        "is_elevator": false
+      },
+      {
+        "name": "JOHN F MCCORMACK RD NE & MICHIGAN AVE NE",
+        "description": "Canopied escalator and stairway entrance by walkway from John F. McCormick Rd NE, west of Michigan Ave NE.",
+        "lat": 38.93383,
+        "lon": -76.995024,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B06",
+    "codes": [
+      "B06",
+      "E06"
+    ],
+    "name": "Fort Totten",
+    "lat": 38.951777,
+    "lon": -77.002174,
+    "lines": [
+      "GR",
+      "RD",
+      "YL"
+    ],
+    "address": "550 Galloway St NE, Washington, DC 20011",
+    "entrances": [
+      {
+        "name": "GALLOWAY ST NE & 1ST PL NE",
+        "description": "Facility entrance from the Galloway St NE segment goes under the track, and also accessible from kiss&ride and bus bay area.",
+        "lat": 38.952078,
+        "lon": -77.002275,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B07",
+    "codes": [
+      "B07"
+    ],
+    "name": "Takoma",
+    "lat": 38.975532,
+    "lon": -77.017834,
+    "lines": [
+      "RD"
+    ],
+    "address": "327 Cedar St NW, Washington, DC 20012",
+    "entrances": [
+      {
+        "name": "CEDAR ST NW & CARROLL ST NW (ELEVATOR)",
+        "description": "Elevator to station is located inside the tunnel and is accessible from parking lot and bus bay.",
+        "lat": 38.975839,
+        "lon": -77.017831,
+        "is_elevator": true
+      },
+      {
+        "name": "CEDAR ST NW & CARROLL ST NW",
+        "description": "South side station entrance located east of Cedar St NW and Eastern Ave NW, accessible from bus bay and the sidewalks from Cedar St NW.",
+        "lat": 38.975102,
+        "lon": -77.017425,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B08",
+    "codes": [
+      "B08"
+    ],
+    "name": "Silver Spring",
+    "lat": 38.993841,
+    "lon": -77.031321,
+    "lines": [
+      "RD"
+    ],
+    "address": "8400 Colesville Rd, Silver Spring, MD 20910",
+    "entrances": [
+      {
+        "name": "2ND AVE & COLESVILLE RD",
+        "description": "Station entrance from north of Colesville Road and west of 2nd Ave to station northeast side.",
+        "lat": 38.994243,
+        "lon": -77.031654,
+        "is_elevator": false
+      },
+      {
+        "name": "COLESVILLE RD & E-WEST HWY (NORTH)",
+        "description": "Station entrance from north of Colesville Road and east of East-West Hwy to station northwest side.",
+        "lat": 38.994093,
+        "lon": -77.031854,
+        "is_elevator": false
+      },
+      {
+        "name": "COLESVILLE RD & E-WEST HWY (SOUTH)",
+        "description": "Station entrance from south of Colesville Road and east of East-West Hwy to station southwest side.",
+        "lat": 38.993739,
+        "lon": -77.031348,
+        "is_elevator": false
+      },
+      {
+        "name": "WAYNE AVE & COLESVILLE RD",
+        "description": "Walkway from Wayne Ave and Colesville Rd to south side of the station.",
+        "lat": 38.993832,
+        "lon": -77.031116,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B09",
+    "codes": [
+      "B09"
+    ],
+    "name": "Forest Glen",
+    "lat": 39.015413,
+    "lon": -77.042953,
+    "lines": [
+      "RD"
+    ],
+    "address": "9730 Georgia Ave, Silver Spring, MD 20910",
+    "entrances": [
+      {
+        "name": "COLERIDGE DR & FOREST GLEN RD",
+        "description": "Stairway entrance into main entrance passageway from southeast corner of Coleridge Dr/Forest Glen Rd.",
+        "lat": 39.015326,
+        "lon": -77.043647,
+        "is_elevator": false
+      },
+      {
+        "name": "ELKTON AVE & FOREST GLEN RD (TUNNEL)",
+        "description": "Entrance by ramp from southeast corner of bus bay, kiss&ride area, and parking lot located at Kimball Pl/Forest Glen Rd(passageway goes under Forest Glen Rd to the station).",
+        "lat": 39.01582,
+        "lon": -77.044327,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B10",
+    "codes": [
+      "B10"
+    ],
+    "name": "Wheaton",
+    "lat": 39.038558,
+    "lon": -77.051098,
+    "lines": [
+      "RD"
+    ],
+    "address": "11171 Georgia Ave, Wheaton, MD 20902",
+    "entrances": [
+      {
+        "name": "GEORGIA AVE & REEDIE DR",
+        "description": "Station entrance from the building located at the southeast corner of Georgia Ave and Reedie Dr.",
+        "lat": 39.038671,
+        "lon": -77.050275,
+        "is_elevator": false
+      },
+      {
+        "name": "GEORGIA AVE & REEDIE DR (TUNNEL)",
+        "description": "Passageway to station from the bus bay area located southwest corner of Georgia Ave and Reedie Dr and is also reachable by the pedestrian bridge over Veirs Mill Rd.",
+        "lat": 39.038319,
+        "lon": -77.051086,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B11",
+    "codes": [
+      "B11"
+    ],
+    "name": "Glenmont",
+    "lat": 39.061713,
+    "lon": -77.05341,
+    "lines": [
+      "RD"
+    ],
+    "address": "12601 Georgia Ave, Silver Spring, MD 20906",
+    "entrances": [
+      {
+        "name": "GEORGIA AVE & GLENALLAN AVE (ELEVATOR)",
+        "description": "Street level elevator from east of Georgia Ave, and is accessible from Glenallan Ave to the metered parking space and parking garage.",
+        "lat": 39.062246,
+        "lon": -77.053358,
+        "is_elevator": true
+      },
+      {
+        "name": "GEORGIA AVE & URBANA DR (ELEVATOR)",
+        "description": "Street level elevator from west from Georgia Ave next to metered parking area.",
+        "lat": 39.061956,
+        "lon": -77.05361,
+        "is_elevator": true
+      },
+      {
+        "name": "GEORGIA AVE & GLENALLAN AVE",
+        "description": "Station entrance from east side of Georgia Ave, and is accessible from parking garage and bus bay area.",
+        "lat": 39.062312,
+        "lon": -77.053179,
+        "is_elevator": false
+      },
+      {
+        "name": "GEORGIA AVE & URBANA DR",
+        "description": "Station entrance from west of Georgia Ave and is accessible from Georgia Ave sidewalks and from Urbana Dr and Flack St walkway to the station.",
+        "lat": 39.061783,
+        "lon": -77.053599,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "B35",
+    "codes": [
+      "B35"
+    ],
+    "name": "NoMa-Gallaudet U",
+    "lat": 38.907407,
+    "lon": -77.002961,
+    "lines": [
+      "RD"
+    ],
+    "address": "200 Florida Ave N.E., Washington, DC 20002",
+    "entrances": [
+      {
+        "name": "FLORIDA\u00e1 AVE NE & 2ND ST NE",
+        "description": "Station entrance is located east of N St NE and 2nd St NE intersection ( Florida Ave exit ).",
+        "lat": 38.907336,
+        "lon": -77.003302,
+        "is_elevator": false
+      },
+      {
+        "name": "M ST NE & 2ND ST NE",
+        "description": "Station entrance is located at the northwest corner of M St NE and 2nd St NE ( M St Exit).",
+        "lat": 38.905774,
+        "lon": -77.003629,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C02",
+    "codes": [
+      "C02"
+    ],
+    "name": "McPherson Square",
+    "lat": 38.901316,
+    "lon": -77.033652,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "1400 I St. NW, Washington, DC 20005",
+    "entrances": [
+      {
+        "name": "1400 EYE ST.",
+        "description": "Building entrance from east mezzanine to 1400 Eye St NW office building entrance.",
+        "lat": 38.901142,
+        "lon": -77.032318,
+        "is_elevator": false
+      },
+      {
+        "name": "14TH ST NW & I ST NW (ELEVATOR)",
+        "description": "Building entrance to elevator towards the station is located at the southwest corner of I St NW and 14th St NW.",
+        "lat": 38.901098,
+        "lon": -77.032303,
+        "is_elevator": true
+      },
+      {
+        "name": "14TH ST NW & ZEI\u00e1 ALY NW",
+        "description": "Building entrance from the southwest corner of 14th St NW and I St NW to the station escalator.",
+        "lat": 38.900915,
+        "lon": -77.032222,
+        "is_elevator": false
+      },
+      {
+        "name": "VERMONT AVE NW & I ST NW",
+        "description": "Building entrance from the southwest corner of I St NW,15th St NW and Vermont Ave NW.",
+        "lat": 38.90113,
+        "lon": -77.034947,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C03",
+    "codes": [
+      "C03"
+    ],
+    "name": "Farragut West",
+    "lat": 38.901311,
+    "lon": -77.03981,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "900 18th St. NW, Washington, DC 20006",
+    "entrances": [
+      {
+        "name": "18TH ST NW & I ST NW (ELEVATOR)",
+        "description": "Entrance elevator is located at the northwest corner of 18th St NW and I St NW.",
+        "lat": 38.901502,
+        "lon": -77.041888,
+        "is_elevator": true
+      },
+      {
+        "name": "17TH ST NW & I ST NW",
+        "description": "Building entrance from the southeast corner of 17th St NW and I St NW(Escalator only).",
+        "lat": 38.901169,
+        "lon": -77.039164,
+        "is_elevator": false
+      },
+      {
+        "name": "18TH ST NW & I ST NW",
+        "description": "Station entrance escalator is located in the building courtyard, at the northwest corner of 18 St NW and I St NW.",
+        "lat": 38.901622,
+        "lon": -77.041965,
+        "is_elevator": false
+      },
+      {
+        "name": "18TH ST NW & I ST NW",
+        "description": "Station entrance escalator is located in the building (International Square) food court",
+        "lat": 38.901386,
+        "lon": -77.042054,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C04",
+    "codes": [
+      "C04"
+    ],
+    "name": "Foggy Bottom-GWU",
+    "lat": 38.900599,
+    "lon": -77.050273,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "2301 I St. NW, Washington, DC 20037",
+    "entrances": [
+      {
+        "name": "23RD ST NW & I ST NW (ELEVATOR)",
+        "description": "Station entrance form street level elevator facing I St NW, adjacent to station escalator (south end of George Washington University Hospital building).",
+        "lat": 38.900824,
+        "lon": -77.050856,
+        "is_elevator": true
+      },
+      {
+        "name": "23RD ST NW & I ST NW",
+        "description": "Station entrance from the northwest corner of 23rd St NW and I St NW (south end of George Washington University Hospital building).",
+        "lat": 38.900866,
+        "lon": -77.050371,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C05",
+    "codes": [
+      "C05"
+    ],
+    "name": "Rosslyn",
+    "lat": 38.896595,
+    "lon": -77.07146,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "1850 N. Moore Street, Arlington, VA 22209",
+    "entrances": [
+      {
+        "name": "N MOORE ST & WILSON BLVD (ELEVATOR)",
+        "description": "Street level high-speed elevator entrance, accessible from N. Lynn St and N.Moore St sidewalks.",
+        "lat": 38.896143,
+        "lon": -77.071377,
+        "is_elevator": true
+      },
+      {
+        "name": "N MOORE ST & WILSON BLVD",
+        "description": "Station main entrance is accessible from bus bay area located on N.Moore St segment between 19th St.N and Wilson Blvd.",
+        "lat": 38.895949,
+        "lon": -77.071707,
+        "is_elevator": false
+      },
+      {
+        "name": "FORT MYER DR & WILSON BLVD",
+        "description": "Building entrance from N. Fort Myer Dr segment between N. Nash St and Wilson Blvd is accessible by N. Fort Myer Dr sidewalks.",
+        "lat": 38.895807,
+        "lon": -77.072105,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C06",
+    "codes": [
+      "C06"
+    ],
+    "name": "Arlington Cemetery",
+    "lat": 38.884574,
+    "lon": -77.063108,
+    "lines": [
+      "BL"
+    ],
+    "address": "1000 North Memorial Drive, Arlington, VA 22211",
+    "entrances": [
+      {
+        "name": "MEMORIAL DR & JEFFERSON DAVIS HWY (NORTH)",
+        "description": "Elevator entrance from the west side of Memorial Dr where it crosses over Jefferson Davis Hwy.",
+        "lat": 38.88474,
+        "lon": -77.063349,
+        "is_elevator": true
+      },
+      {
+        "name": "TRACK2-MEMORIAL DR & JEFFERSON DAVIS HWY",
+        "description": "Elevator entrance from Memorial Dr (between rail tracks and GW Pkwy).",
+        "lat": 38.884831,
+        "lon": -77.063099,
+        "is_elevator": true
+      },
+      {
+        "name": "MEMORIAL DR & JEFFERSON DAVIS HWY (NORTH)",
+        "description": "Escalator entrance from the west side of Memorial Dr where it crosses over Jefferson Davis Hwy.",
+        "lat": 38.884545,
+        "lon": -77.063751,
+        "is_elevator": false
+      },
+      {
+        "name": "MEMORIAL DR & JEFFERSON DAVIS HWY (SOUTH)",
+        "description": "Escalator entrance from the east side of Memorial Dr where it crosses over Jefferson Davis Hwy.",
+        "lat": 38.884215,
+        "lon": -77.063556,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C07",
+    "codes": [
+      "C07"
+    ],
+    "name": "Pentagon",
+    "lat": 38.869349,
+    "lon": -77.054013,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "2 South Rotary Road, Arlington, VA 22202",
+    "entrances": [
+      {
+        "name": "S EADS ST (ELEVATOR)",
+        "description": "Steet level elevator to station is accessible from bus bay area sidewalks.",
+        "lat": 38.869591,
+        "lon": -77.053838,
+        "is_elevator": true
+      },
+      {
+        "name": "S EADS ST & (BUSBAY)",
+        "description": "Station entrance at the north side of bus bay accessible from the bus bay area sidewalks.",
+        "lat": 38.869857,
+        "lon": -77.053649,
+        "is_elevator": false
+      },
+      {
+        "name": "S EADS ST & N ROTARY RD",
+        "description": "Station entrance at the south side of bus bay accessible from the bus bay area sidewalks.",
+        "lat": 38.869156,
+        "lon": -77.054574,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C08",
+    "codes": [
+      "C08"
+    ],
+    "name": "Pentagon City",
+    "lat": 38.863045,
+    "lon": -77.059507,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "1250 South Hayes St., Arlington, VA 22202",
+    "entrances": [
+      {
+        "name": "12TH ST S & S HAYES ST (ELEVATOR)",
+        "description": "Street level elevator located at the southeast corner of Hayes St and 12th St next to escalator.",
+        "lat": 38.86281,
+        "lon": -77.058964,
+        "is_elevator": true
+      },
+      {
+        "name": "12TH ST S & S HAYES ST (EAST)",
+        "description": "Canopied entrance in front of Pentagon Center(Borders Store) building located southeast corner of Hayes St and 12th St.",
+        "lat": 38.862548,
+        "lon": -77.059105,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST S & S HAYES ST (WEST)",
+        "description": "Canopied entrance between S.Hayes St and service road to the stores(Nordstrom, Macy's).",
+        "lat": 38.862615,
+        "lon": -77.059909,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST & HAYES ST",
+        "description": "Stairs from northeast corner of Hayes St and 12th Street",
+        "lat": 38.863208,
+        "lon": -77.058964,
+        "is_elevator": false
+      },
+      {
+        "name": "FASHION CENTRE AT PENTAGON CITY ENTRANCE",
+        "description": "Entrance from Fashion Centre at Pentagon City, accessed from the Mezzanine Concourse.",
+        "lat": 38.862813,
+        "lon": -77.059897,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C09",
+    "codes": [
+      "C09"
+    ],
+    "name": "Crystal City",
+    "lat": 38.85779,
+    "lon": -77.050589,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "1750 S. Bell St., Arlington, VA 22202",
+    "entrances": [
+      {
+        "name": "18TH ST S & CRYSTAL DR (ELEVATOR)",
+        "description": "Entrance elevator located at the right side of 18th St South segment between S. Bell St and Crystal Dr.",
+        "lat": 38.857962,
+        "lon": -77.050786,
+        "is_elevator": true
+      },
+      {
+        "name": "S CLARK ST & 18TH ST S",
+        "description": "Canopied entrance is accessible from the sidewalks from 18th St South.",
+        "lat": 38.858038,
+        "lon": -77.051472,
+        "is_elevator": false
+      },
+      {
+        "name": "CRYSTAL CITY SHOPS ENTRANCE 1",
+        "description": "Entrance from Crystal City shops south side intermediate passageway to mezzanine",
+        "lat": 38.857982,
+        "lon": -77.051164,
+        "is_elevator": false
+      },
+      {
+        "name": "CRYSTAL CITY SHOPS ENTRANCE 2",
+        "description": "Entrance from VRE north side intermediate passageway to mezzanine",
+        "lat": 38.858059,
+        "lon": -77.051158,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C10",
+    "codes": [
+      "C10"
+    ],
+    "name": "Ronald Reagan Washington National Airport",
+    "lat": 38.852985,
+    "lon": -77.043805,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "2400 S. Smith Blvd., Arlington, VA 22202",
+    "entrances": [
+      {
+        "name": "S SMITH BLVD (ELEVATOR)",
+        "description": "Street level elevator to station platform",
+        "lat": 38.853463,
+        "lon": -77.044086,
+        "is_elevator": true
+      },
+      {
+        "name": "S SMITH BLVD (NORTH)",
+        "description": "Pedestrian bridge to station north entrance is accessible from parking garage - C and airport terminal -C",
+        "lat": 38.85463,
+        "lon": -77.044507,
+        "is_elevator": false
+      },
+      {
+        "name": "S SMITH BLVD (SOUTH)",
+        "description": "Pedestrian bridge to station south entrance is accessible from parking garage-B and airport terminal-B",
+        "lat": 38.85234,
+        "lon": -77.043571,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C11",
+    "codes": [
+      "C11"
+    ],
+    "name": "Potomac Yard",
+    "lat": 38.83321,
+    "lon": -77.04642,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "2900 Potomac Greens Drive, Alexandria, VA 22314",
+    "entrances": [
+      {
+        "name": "POTOMAC AVE &GLEBE RD",
+        "description": "South Pavilion entrance from Potomac Ave",
+        "lat": 38.832747,
+        "lon": -77.047506,
+        "is_elevator": false
+      },
+      {
+        "name": "UNIVERSITY DR ENTRANCE",
+        "description": "North Pavilion entrance from the University Drive",
+        "lat": 38.834986,
+        "lon": -77.047267,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C12",
+    "codes": [
+      "C12"
+    ],
+    "name": "Braddock Road",
+    "lat": 38.814009,
+    "lon": -77.053763,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "700 N West St, Alexandria, VA 22314",
+    "entrances": [
+      {
+        "name": "N WEST ST & MADISON ST",
+        "description": "Mezzanine entrance from the bus bay and kiss&ride area off N West St.",
+        "lat": 38.813735,
+        "lon": -77.053876,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C13",
+    "codes": [
+      "C13"
+    ],
+    "name": "King St-Old Town",
+    "lat": 38.806474,
+    "lon": -77.061115,
+    "lines": [
+      "BL",
+      "YL"
+    ],
+    "address": "1900 King Street, Alexandria, VA 22301",
+    "entrances": [
+      {
+        "name": "CAMERON ST & COMMONWEALTH AVE",
+        "description": "Station entrance located under the platform and tracks accessible from the northeast corner of Cameron St and Commonwealth Ave intersection.",
+        "lat": 38.807295,
+        "lon": -77.059808,
+        "is_elevator": false
+      },
+      {
+        "name": "DIAGONAL RD (BUSBAY)",
+        "description": "Station main entrance by the walkway from bus bay and kiss&ride area located west of Diagonal Rd and from the sidewalks from Rt.7,( King Street).",
+        "lat": 38.80629,
+        "lon": -77.061299,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "C14",
+    "codes": [
+      "C14"
+    ],
+    "name": "Eisenhower Avenue",
+    "lat": 38.800313,
+    "lon": -77.071173,
+    "lines": [
+      "YL"
+    ],
+    "address": "2400 Eisenhower Ave, Alexandria, VA 22314",
+    "entrances": [
+      {
+        "name": "EISENHOWER AVE & SWAMP FOX RD (WEST)",
+        "description": "Facility entrance from busbay and west side of the station to access the elevator/escalator inside the station.",
+        "lat": 38.800566,
+        "lon": -77.071001,
+        "is_elevator": true
+      }
+    ]
+  },
+  {
+    "code": "C15",
+    "codes": [
+      "C15"
+    ],
+    "name": "Huntington",
+    "lat": 38.793841,
+    "lon": -77.075301,
+    "lines": [
+      "YL"
+    ],
+    "address": "2701 Huntington Ave, Alexandria, VA 22303",
+    "entrances": [
+      {
+        "name": "N KINGS HWY & JEFFERSON DR",
+        "description": "Escalator to station mezzanine is located and accessible from metered parking, bus bay and parking garage (south end) sidewalks",
+        "lat": 38.792475,
+        "lon": -77.07591,
+        "is_elevator": false
+      },
+      {
+        "name": "HUNTINGTON AVE & METROVIEW PKWY",
+        "description": "Station entrance is accessible by the walkway from kiss&ride, bus bay and parking garage located north end of station near Huntington Ave.",
+        "lat": 38.794613,
+        "lon": -77.075168,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D01",
+    "codes": [
+      "D01"
+    ],
+    "name": "Federal Triangle",
+    "lat": 38.893757,
+    "lon": -77.028218,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "302 12th St. NW, Washington, DC 20004",
+    "entrances": [
+      {
+        "name": "13TH ST NW & PENNSYLVANIA AVE NW (BUILDING)",
+        "description": "Connector entrance from Reagan Building and International Trade Center Atrium Corridor",
+        "lat": 38.893757,
+        "lon": -77.028722,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST NW & PENNSYLVANIA AVE NW (ELEVATOR)",
+        "description": "Street level elevator located at 12th St NW segment between Pennsylvania Ave NW and Constitution Ave NW.",
+        "lat": 38.893773,
+        "lon": -77.028318,
+        "is_elevator": true
+      },
+      {
+        "name": "12TH ST NW & PENNSYLVANIA AVE NW",
+        "description": "Building entrance from 12th St NW segment between Pennsylvania Ave NW and Constitution Ave NW.",
+        "lat": 38.893827,
+        "lon": -77.028988,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D02",
+    "codes": [
+      "D02"
+    ],
+    "name": "Smithsonian",
+    "lat": 38.888022,
+    "lon": -77.028232,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "1200 Independence Avenue SW, Washington, DC 20004",
+    "entrances": [
+      {
+        "name": "12TH ST SW & INDEPENDENCE AVE SW (ELEVATOR)",
+        "description": "Street level elevator located at the northwest corner of Independence Ave SW and 12th St SW.",
+        "lat": 38.887739,
+        "lon": -77.028544,
+        "is_elevator": true
+      },
+      {
+        "name": "12TH ST NW & JEFERSON DR SW",
+        "description": "Station entrance from National Mall area at Jefferson Dr SW between 12th St NW and 13th St NW.",
+        "lat": 38.889086,
+        "lon": -77.028371,
+        "is_elevator": false
+      },
+      {
+        "name": "12TH ST SW & INDEPENDENCE AVE SW",
+        "description": "Station entrance adjacent to Department of Agriculture building located southwest corner of 12th St SW and Independence Ave SW.",
+        "lat": 38.887364,
+        "lon": -77.028604,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D03",
+    "codes": [
+      "D03",
+      "F03"
+    ],
+    "name": "L'Enfant Plaza",
+    "lat": 38.884775,
+    "lon": -77.021964,
+    "lines": [
+      "BL",
+      "GR",
+      "OR",
+      "SV",
+      "YL"
+    ],
+    "address": "600 Maryland Avenue SW, Washington, DC 20024",
+    "entrances": [
+      {
+        "name": "7TH ST SW & D ST SW",
+        "description": "Building entrance(USDOT) from D St SW segment between 6th St SW and 7th St SW.",
+        "lat": 38.884483,
+        "lon": -77.020865,
+        "is_elevator": false
+      },
+      {
+        "name": "9TH ST SW & D ST SW",
+        "description": "Building entrance(L'Enfant Plaza) from D St SW segment between 9th St SW and 7th St SW.",
+        "lat": 38.884449,
+        "lon": -77.023542,
+        "is_elevator": false
+      },
+      {
+        "name": "C ST SW & MARYLAND AVE (ELEVATOR)",
+        "description": "Street level elevator located on 7th St SW segment between VRE tracks and C St SW/Maryland Ave SW intersection.",
+        "lat": 38.885982,
+        "lon": -77.022093,
+        "is_elevator": true
+      },
+      {
+        "name": "7TH ST SW & MARYLAND AVE SW",
+        "description": "Canopied entrance located at Maryland Ave SW and the east of 7th St SW.",
+        "lat": 38.886265,
+        "lon": -77.02148,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D04",
+    "codes": [
+      "D04"
+    ],
+    "name": "Federal Center SW",
+    "lat": 38.884958,
+    "lon": -77.01586,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "401 3rd Street SW, Washington, DC 20024",
+    "entrances": [
+      {
+        "name": "D ST SW & 3RD ST SW (ELEVATOR)",
+        "description": "Building entrance located in the D St SW segment between 3rd St SW and 4th St SW.",
+        "lat": 38.884914,
+        "lon": -77.016032,
+        "is_elevator": true
+      },
+      {
+        "name": "D ST SW & 3RD ST SW",
+        "description": "Station entrance is at the southeast corner of 3rd St SW and D St SW.",
+        "lat": 38.884875,
+        "lon": -77.015405,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D05",
+    "codes": [
+      "D05"
+    ],
+    "name": "Capitol South",
+    "lat": 38.884968,
+    "lon": -77.005137,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "355 First Street SE, Washington, DC 20003",
+    "entrances": [
+      {
+        "name": "1ST ST SE & D ST SE (ELEVATOR)",
+        "description": "Elevator entrance from the northwest corner of D St SE and 1 St SE.",
+        "lat": 38.885182,
+        "lon": -77.006151,
+        "is_elevator": true
+      },
+      {
+        "name": "1ST ST SE & C ST SE",
+        "description": "Escalator entrance from 1 St SE, between C St SE and D St SE.",
+        "lat": 38.885665,
+        "lon": -77.00606,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D06",
+    "codes": [
+      "D06"
+    ],
+    "name": "Eastern Market",
+    "lat": 38.884124,
+    "lon": -76.995334,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "701 Pennsylvania Avenue SE, Washington, DC 20003",
+    "entrances": [
+      {
+        "name": "D ST SE & 7TH ST SE (ELEVATOR)",
+        "description": "Entrance elevator located just east of D St SE/7th St SE intersection and adjacent to canopied entrance.",
+        "lat": 38.884246,
+        "lon": -76.996024,
+        "is_elevator": true
+      },
+      {
+        "name": "PENNSYLVANIA AVE SE & 7TH ST SE",
+        "description": "Canopied entrance located at the southeast corner of Pennsylvania Ave SE and 7th St SE, and it also accessible from 8th St SE and D St SE.",
+        "lat": 38.884213,
+        "lon": -76.995736,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D07",
+    "codes": [
+      "D07"
+    ],
+    "name": "Potomac Ave",
+    "lat": 38.880841,
+    "lon": -76.985721,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "700 14th Street SE, Washington, DC 20003",
+    "entrances": [
+      {
+        "name": "14TH ST SE & G ST SE (ELEVATOR)",
+        "description": "Street level elevator is accessible by the sidewalks from G St SE, 14th St SE and from bus bay.",
+        "lat": 38.881049,
+        "lon": -76.985113,
+        "is_elevator": true
+      },
+      {
+        "name": "14TH ST SE & PENNSYLVANIA AVE SE",
+        "description": "Station entrance is located north of bus bay and northeast corner of 14th St SE and Potomac Ave SE.",
+        "lat": 38.880768,
+        "lon": -76.985199,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D08",
+    "codes": [
+      "D08"
+    ],
+    "name": "Stadium-Armory",
+    "lat": 38.88594,
+    "lon": -76.977485,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ],
+    "address": "192 19th St. SE, Washington, DC 20003",
+    "entrances": [
+      {
+        "name": "19TH ST SE & BURKE ST SE (ELEVATOR)",
+        "description": "Street level elevator from 19th St SE segment between Burke St SE and C St SE.",
+        "lat": 38.885918,
+        "lon": -76.977158,
+        "is_elevator": true
+      },
+      {
+        "name": "19TH ST SE & C ST SE",
+        "description": "Station entrance located at the northeast corner of 19th St SE and C St SE.",
+        "lat": 38.885602,
+        "lon": -76.977059,
+        "is_elevator": false
+      },
+      {
+        "name": "19TH ST SE & A ST SE",
+        "description": "Station entrance at the northeast corner of 19th St SE and Independence Ave SE.",
+        "lat": 38.888355,
+        "lon": -76.977098,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D09",
+    "codes": [
+      "D09"
+    ],
+    "name": "Minnesota Ave",
+    "lat": 38.898284,
+    "lon": -76.948042,
+    "lines": [
+      "OR"
+    ],
+    "address": "4000 Minnesota Ave NE, Washington, DC 20019",
+    "entrances": [
+      {
+        "name": "MINNESOTA AVE NE & GAULT PL NE (ELEVATOR)",
+        "description": "Street level elevator located west of Minnesota Ave NE is accessible by the sidewalks from Minnesota Ave, bus bay and parking lot.",
+        "lat": 38.898807,
+        "lon": -76.946692,
+        "is_elevator": true
+      },
+      {
+        "name": "MINNESOTA AVE NE & GRANT ST NE",
+        "description": "Station entrance is from the north end of the bus bay at Minnesota Ave. NE and Grant St. NE (Northwest side).",
+        "lat": 38.898607,
+        "lon": -76.946922,
+        "is_elevator": false
+      },
+      {
+        "name": "HAYES ST NE & KENILWORTH AVE NE",
+        "description": "Pedestrian walkway from street level to station passageway is located at the east side of I-295 northbound and is accessible by the pedestrian bridge originates at the west side of I-295(Kenilworth Ave NE) at Hayes St NE.",
+        "lat": 38.899569,
+        "lon": -76.946823,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D10",
+    "codes": [
+      "D10"
+    ],
+    "name": "Deanwood",
+    "lat": 38.907734,
+    "lon": -76.936177,
+    "lines": [
+      "OR"
+    ],
+    "address": "4720 Minnesota Ave NE, Washington, DC 20019",
+    "entrances": [
+      {
+        "name": "MINNESOTA AVE NE & NASH ST NE (ELEVATOR)",
+        "description": "Elevator from bus bay, kiss&ride area and parking lot located at the Minnesota Ave NE.",
+        "lat": 38.908191,
+        "lon": -76.934833,
+        "is_elevator": true
+      },
+      {
+        "name": "MINNESOTA AVE NE & 48TH ST NE",
+        "description": "Station entrance is accessible from the bus bay, kiss&ride area and parking lot located at the Minnesota Ave NE.",
+        "lat": 38.908341,
+        "lon": -76.934626,
+        "is_elevator": false
+      },
+      {
+        "name": "POLK ST NE & OLIVE ST NE (TUNNEL)",
+        "description": "Walkway from the intersection of Polk St NE and Olive St NE, passageway goes under CSX rail tracks to the station.",
+        "lat": 38.908552,
+        "lon": -76.935179,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D11",
+    "codes": [
+      "D11"
+    ],
+    "name": "Cheverly",
+    "lat": 38.91652,
+    "lon": -76.915427,
+    "lines": [
+      "OR"
+    ],
+    "address": "5501 Columbia Park Rd, Cheverly, MD 20785",
+    "entrances": [
+      {
+        "name": "COLUMBIA PARK RD & RT 50 (ELEVATOR)",
+        "description": "Elevator entrance from northeast corner of parking lot, next to bus bay and kiss&ride.",
+        "lat": 38.916174,
+        "lon": -76.916766,
+        "is_elevator": true
+      },
+      {
+        "name": "COLUMBIA PARK RD & RT 50",
+        "description": "Escalator entrance from bus bay, parking lot, and walkway from Columbia Park Rd.",
+        "lat": 38.916255,
+        "lon": -76.916519,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D12",
+    "codes": [
+      "D12"
+    ],
+    "name": "Landover",
+    "lat": 38.934411,
+    "lon": -76.890988,
+    "lines": [
+      "OR"
+    ],
+    "address": "3000 Pennsy Dr, Landover, MD 20785",
+    "entrances": [
+      {
+        "name": "PENNSY DR & LANDOVER RD",
+        "description": "Station entrance is accessible by the walkway from parking lot, bus bay and kiss&ride area located west of Pennsy Dr.",
+        "lat": 38.933429,
+        "lon": -76.891189,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "D13",
+    "codes": [
+      "D13"
+    ],
+    "name": "New Carrollton",
+    "lat": 38.947674,
+    "lon": -76.872144,
+    "lines": [
+      "OR"
+    ],
+    "address": "4700 Garden City Dr, New Carrollton, MD 20784",
+    "entrances": [
+      {
+        "name": "ELLIN RD & HARKINS RD (ELEVATOR)",
+        "description": "Entrance elevator( towards passageway to station) is adjacent to west side escalator and is accessible from IRS pedestrian bridge, parking lot and bus bay located southeast corner of Ellin Rd and Harkins Rd.",
+        "lat": 38.948423,
+        "lon": -76.872176,
+        "is_elevator": true
+      },
+      {
+        "name": "ELLIN RD & HARKINS RD",
+        "description": "Canopied entrance (towards passageway to station) from west side of the station is accessible from pedestrian bridge from IRS building, bus bay and parking lot located southeast corner of Ellis Rd and Harkins Rd.",
+        "lat": 38.948458,
+        "lon": -76.872344,
+        "is_elevator": false
+      },
+      {
+        "name": "GARDEN CITY DR & CORPORATE DR",
+        "description": "Entrance from station parking garage",
+        "lat": 38.94824,
+        "lon": -76.869336,
+        "is_elevator": false
+      },
+      {
+        "name": "GARDEN CITY DR & CORPORATE DR",
+        "description": "East side station entrance is accessible from bus bay and parking lot located southwest corner of Garden City Dr and Corporate Dr.",
+        "lat": 38.947915,
+        "lon": -76.871785,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E01",
+    "codes": [
+      "E01"
+    ],
+    "name": "Mt Vernon Sq 7th St-Convention Center",
+    "lat": 38.905604,
+    "lon": -77.022256,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "700 M St. NW, Washington, DC 20001",
+    "entrances": [
+      {
+        "name": "M ST NW & 7TH ST NW (NORTH ELEVATOR)",
+        "description": "Station entrance from Convention Center building located at the northwest corner of M St NW and 7th St NW.",
+        "lat": 38.905933,
+        "lon": -77.022122,
+        "is_elevator": true
+      },
+      {
+        "name": "M ST NW & 7TH ST NW (SOUTH ELEVATOR)",
+        "description": "Station entrance from Convention Center building located at the southwest corner of M St NW and 7th St NW.",
+        "lat": 38.905514,
+        "lon": -77.022348,
+        "is_elevator": true
+      },
+      {
+        "name": "M ST NW & 7TH ST NW",
+        "description": "Station entrance from Convention Center building located at the southwest corner of M St NW and 7th St NW",
+        "lat": 38.905288,
+        "lon": -77.022252,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E02",
+    "codes": [
+      "E02"
+    ],
+    "name": "Shaw-Howard U",
+    "lat": 38.912919,
+    "lon": -77.022194,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "1701 8th St. NW, Washington, DC 20001",
+    "entrances": [
+      {
+        "name": "7TH ST NW & S ST NW (ELEVATOR)",
+        "description": "Street level elevator from northeast corner of S St NW and 7th St NW.",
+        "lat": 38.914222,
+        "lon": -77.021627,
+        "is_elevator": true
+      },
+      {
+        "name": "7TH ST NW & S ST NW",
+        "description": "Canopied Entrance from 7th St NW segment between S St NW and T St NW.",
+        "lat": 38.914572,
+        "lon": -77.021672,
+        "is_elevator": false
+      },
+      {
+        "name": "8TH ST NW & R ST NW",
+        "description": "Canopied entrance from R St NW segment between 7th St NW and 8th St NW.",
+        "lat": 38.912779,
+        "lon": -77.022723,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E03",
+    "codes": [
+      "E03"
+    ],
+    "name": "U Street/African-Amer Civil War Memorial/Cardozo",
+    "lat": 38.916489,
+    "lon": -77.028938,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "1240 U Street NW, Washington, DC 20009",
+    "entrances": [
+      {
+        "name": "13TH ST NW & U ST NW (ELEVATOR)",
+        "description": "Street level elevator from the building located at U St NW segment between 12th St NW and 13th St NW.",
+        "lat": 38.916778,
+        "lon": -77.028917,
+        "is_elevator": true
+      },
+      {
+        "name": "13TH ST NW & U ST NW",
+        "description": "Station entrance from southeast corner of 13th Ave NW and U St NW.",
+        "lat": 38.916823,
+        "lon": -77.029193,
+        "is_elevator": false
+      },
+      {
+        "name": "VERMONT AVE NW & U ST NW",
+        "description": "Station entrance from the south of 10th St and southwest corner of U St NW and Vermont Ave NW.",
+        "lat": 38.916714,
+        "lon": -77.02597,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E04",
+    "codes": [
+      "E04"
+    ],
+    "name": "Columbia Heights",
+    "lat": 38.928672,
+    "lon": -77.032775,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "3030 14th St. NW, Washington, DC 20009",
+    "entrances": [
+      {
+        "name": "14TH ST NW & IRVING ST NW (ELEVATOR)",
+        "description": "Elevator entrance from southwest corner of 14th St NW and Irving St NW.",
+        "lat": 38.928557,
+        "lon": -77.032802,
+        "is_elevator": true
+      },
+      {
+        "name": "14TH ST NW & IRVING ST NW (EAST)",
+        "description": "Canopied escalator entrance from northeast corner of 14th St NW and Irving St NW.",
+        "lat": 38.928956,
+        "lon": -77.032448,
+        "is_elevator": false
+      },
+      {
+        "name": "14TH ST NW & IRVING ST NW (WEST)",
+        "description": "Canopied escalator and stairway entrance from southwest corner of 14th St NW and Irving St NW.",
+        "lat": 38.928607,
+        "lon": -77.033139,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E05",
+    "codes": [
+      "E05"
+    ],
+    "name": "Georgia Ave-Petworth",
+    "lat": 38.936077,
+    "lon": -77.024728,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "3700 Georgia Avenue NW, Washington, DC 20010",
+    "entrances": [
+      {
+        "name": "GEORGIA AVE NW & NEW HAMPSHIRE AVE NW (ELEVATOR)",
+        "description": "Elevator entrance from west side of Georgia Ave NW and New Hampshire Ave NW.",
+        "lat": 38.93681,
+        "lon": -77.024663,
+        "is_elevator": true
+      },
+      {
+        "name": "GEORGIA AVE NW & NEW HAMPSHIRE AVE NW",
+        "description": "Canopied entrance from the west of New Hampshire Ave NW.",
+        "lat": 38.93698,
+        "lon": -77.024127,
+        "is_elevator": false
+      },
+      {
+        "name": "GEORGIA AVE NW & QUINCY ST NW",
+        "description": "Building entrance located at the west side of Georgia Ave NW and New Hampshire Ave NW.",
+        "lat": 38.937192,
+        "lon": -77.024721,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E07",
+    "codes": [
+      "E07"
+    ],
+    "name": "West Hyattsville",
+    "lat": 38.954931,
+    "lon": -76.969881,
+    "lines": [
+      "GR"
+    ],
+    "address": "2700 Hamilton St, Hyattsville, MD 20782",
+    "entrances": [
+      {
+        "name": "HAMILTON ST & AGER RD",
+        "description": "Station entrance located west of Ager Rd is accessible by the sidewalks from bus bay, kiss&ride and parking lot and by the walkway from Lancer Dr located west of the station.",
+        "lat": 38.955717,
+        "lon": -76.9689,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E08",
+    "codes": [
+      "E08"
+    ],
+    "name": "Hyattsville Crossing",
+    "lat": 38.965276,
+    "lon": -76.956182,
+    "lines": [
+      "GR"
+    ],
+    "address": "3575 East-West Hwy, Hyattsville, MD 20782",
+    "entrances": [
+      {
+        "name": "EAST-WEST HWY & BELCREST RD (NORTH)",
+        "description": "Station entrance from north side parking garage (bus bay E-H) located south of East-West Hwy and west of Belcrest Rd.",
+        "lat": 38.965384,
+        "lon": -76.955585,
+        "is_elevator": false
+      },
+      {
+        "name": "EAST-WEST HWY & BELCREST RD (SOUTH)",
+        "description": "Station entrance from south side parking garage (bus bay A-D) located south of East-West Hwy and west of Belcrest Rd.",
+        "lat": 38.965174,
+        "lon": -76.955588,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E09",
+    "codes": [
+      "E09"
+    ],
+    "name": "College Park-U of Md",
+    "lat": 38.978523,
+    "lon": -76.928432,
+    "lines": [
+      "GR"
+    ],
+    "address": "4931 Calvert Rd, College Park, MD 20740",
+    "entrances": [
+      {
+        "name": "RIVER RD & CAMPUS DR (ELEVATOR)",
+        "description": "Elevator entrance by the walkway from parking lot, bus bay, and kiss&ride off of River Rd, located on east side of station.",
+        "lat": 38.978133,
+        "lon": -76.928016,
+        "is_elevator": true
+      },
+      {
+        "name": "CALVERT RD & BOWDOIN AVE (ELEVATOR)",
+        "description": "Canopied Escalator and Elevator entrance from kiss&ride off Calvert Rd, located on east side of station.",
+        "lat": 38.97838,
+        "lon": -76.929004,
+        "is_elevator": true
+      },
+      {
+        "name": "RIVER RD & CAMPUS DR",
+        "description": "Escalator and stairway entrance by the walkway from parking lot, bus bay, and kiss&ride off of River Rd, located on east side of station.",
+        "lat": 38.978183,
+        "lon": -76.927953,
+        "is_elevator": false
+      },
+      {
+        "name": "CAMPUS DRIVE GARAGE",
+        "description": "Entrance from parking garage",
+        "lat": 38.979459,
+        "lon": -76.927229,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "E10",
+    "codes": [
+      "E10"
+    ],
+    "name": "Greenbelt",
+    "lat": 39.011036,
+    "lon": -76.911362,
+    "lines": [
+      "GR"
+    ],
+    "address": "5500 Greenbelt Metro Dr, Beltsville, MD 20705",
+    "entrances": [
+      {
+        "name": "GREENBELT METRO DR & CHERRYWOOD LN",
+        "description": "Station entrance is accessible by the walkway from bus bay, Kiss&Ride, and parking lot located on the east side of the station.",
+        "lat": 39.010833,
+        "lon": -76.911018,
+        "is_elevator": false
+      },
+      {
+        "name": "LACKAWANNA ST & 53RD AVE (TUNNEL)",
+        "description": "Passageway from the intersection of Lackawanna St and 53rd Ave towards the station (tunnel goes under MARC train tracks).",
+        "lat": 39.010818,
+        "lon": -76.911939,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F02",
+    "codes": [
+      "F02"
+    ],
+    "name": "Archives-Navy Memorial-Penn Quarter",
+    "lat": 38.893893,
+    "lon": -77.021902,
+    "lines": [
+      "GR",
+      "YL"
+    ],
+    "address": "701 Pennsylvania Avenue NW, Washington, DC 20004",
+    "entrances": [
+      {
+        "name": "7TH ST NW & PENNSYLVANIA AVE NW (ELEVATOR)",
+        "description": "Elevator entrance from 7th St and Indiana Ave NW.",
+        "lat": 38.893879,
+        "lon": -77.022073,
+        "is_elevator": true
+      },
+      {
+        "name": "7TH ST NW & PENNSYLVANIA AVE NW",
+        "description": "Escalator entrance adjacent to Navy Memorial/west side of 7th and Indiana Ave NW.",
+        "lat": 38.893939,
+        "lon": -77.022528,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F04",
+    "codes": [
+      "F04"
+    ],
+    "name": "Waterfront",
+    "lat": 38.876221,
+    "lon": -77.017491,
+    "lines": [
+      "GR"
+    ],
+    "address": "399 M Street SW, Washington, DC 20024",
+    "entrances": [
+      {
+        "name": "M ST SW & 4TH ST SW (ELEVATOR)",
+        "description": "Street level elevator located at the northeast corner of M St SW and 4th St SW.",
+        "lat": 38.876619,
+        "lon": -77.017352,
+        "is_elevator": true
+      },
+      {
+        "name": "M ST SW & 4TH ST SW",
+        "description": "Station entrance located just north of M St SW and 4th St SW ( near Safeway).",
+        "lat": 38.87702,
+        "lon": -77.017558,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F05",
+    "codes": [
+      "F05"
+    ],
+    "name": "Navy Yard-Ballpark",
+    "lat": 38.876588,
+    "lon": -77.005086,
+    "lines": [
+      "GR"
+    ],
+    "address": "200 M Street SE, Washington, DC 20003",
+    "entrances": [
+      {
+        "name": "M ST SE & NEW JERSEY AVE SE (ELEVATOR)",
+        "description": "Street level elevator to station is located at M St SE segment between 1st St SE and New Jersey Ave SE.",
+        "lat": 38.876618,
+        "lon": -77.004714,
+        "is_elevator": true
+      },
+      {
+        "name": "M ST SE & NEW JERSEY AVE SE",
+        "description": "Canopied entrance from the northwest corner of New Jersey Ave SE and M St SE.",
+        "lat": 38.876667,
+        "lon": -77.004456,
+        "is_elevator": false
+      },
+      {
+        "name": "M ST SE & HALF ST SE",
+        "description": "Building entrance from the southeast corner Half St SE and M St SE to access station escalator.",
+        "lat": 38.876068,
+        "lon": -77.007311,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F06",
+    "codes": [
+      "F06"
+    ],
+    "name": "Anacostia",
+    "lat": 38.862072,
+    "lon": -76.995648,
+    "lines": [
+      "GR"
+    ],
+    "address": "1101 Howard Rd SE, Washington, DC 20020",
+    "entrances": [
+      {
+        "name": "HOWARD RD SE & I295 EXIT 4B",
+        "description": "Station entrance from west side of parking garage located at Howard St SE.",
+        "lat": 38.864603,
+        "lon": -76.995959,
+        "is_elevator": false
+      },
+      {
+        "name": "HOWARD RD SE & SHANNON PL SE (EAST)",
+        "description": "Station entrance from south side of Howard St SE and Shannon Pl SE.",
+        "lat": 38.86208,
+        "lon": -76.995178,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F07",
+    "codes": [
+      "F07"
+    ],
+    "name": "Congress Heights",
+    "lat": 38.845334,
+    "lon": -76.98817,
+    "lines": [
+      "GR"
+    ],
+    "address": "1290 Alabama Ave SE, Washington, DC 20020",
+    "entrances": [
+      {
+        "name": "ALABAMA AVE SE & 13TH ST SE (ELEVATOR)",
+        "description": "Elevator entrance from bus bay, located northeast of 13th St SE and Alabama Ave SE.",
+        "lat": 38.845117,
+        "lon": -76.98781,
+        "is_elevator": true
+      },
+      {
+        "name": "ALABAMA AVE SE & 13TH ST SE (SOUTH)",
+        "description": "Canopied escalator entrance at southeast corner of Alabama Ave SE and 13th St SE.",
+        "lat": 38.844606,
+        "lon": -76.987591,
+        "is_elevator": false
+      },
+      {
+        "name": "ALABAMA AVE SE & 13TH ST SE (NORTH)",
+        "description": "Canopied escalator and stairway entrance from bus bay, kiss&ride and parking lot areas.",
+        "lat": 38.845446,
+        "lon": -76.987816,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F08",
+    "codes": [
+      "F08"
+    ],
+    "name": "Southern Avenue",
+    "lat": 38.840974,
+    "lon": -76.97536,
+    "lines": [
+      "GR"
+    ],
+    "address": "1411 Southern Ave SE, Hillcrest Heights, MD 20748",
+    "entrances": [
+      {
+        "name": "SOUTHERN AVE & VLLEY TERR SE (SOUTH)",
+        "description": "Station entrance from parking garage is accessible from Southern Ave and Oxon Run Dr.",
+        "lat": 38.840268,
+        "lon": -76.975566,
+        "is_elevator": false
+      },
+      {
+        "name": "SOUTHERN AVE & VLLEY TERR SE (NORTH)",
+        "description": "West side station entrance from bus bay located east of Southern Ave.",
+        "lat": 38.840592,
+        "lon": -76.975797,
+        "is_elevator": false
+      },
+      {
+        "name": "SOUTHERN AVE & VLLEY TERR SE (SOUTH)",
+        "description": "Station entrance from bus bay, and pedestrian bridge is accessible from Southern Ave and Oxon Run Dr.",
+        "lat": 38.840439,
+        "lon": -76.975686,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F09",
+    "codes": [
+      "F09"
+    ],
+    "name": "Naylor Road",
+    "lat": 38.851187,
+    "lon": -76.956565,
+    "lines": [
+      "GR"
+    ],
+    "address": "3226 Naylor Rd, Hillcrest Heights, MD 20748",
+    "entrances": [
+      {
+        "name": "NAYLOR RD & GOOD HOPE AVE",
+        "description": "Station entrance located south of the station between bus bay,kiss&ride and parking lot area.",
+        "lat": 38.850953,
+        "lon": -76.956822,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F10",
+    "codes": [
+      "F10"
+    ],
+    "name": "Suitland",
+    "lat": 38.843891,
+    "lon": -76.932022,
+    "lines": [
+      "GR"
+    ],
+    "address": "4500 Silver Hill Rd, Suitland, MD 20746",
+    "entrances": [
+      {
+        "name": "SILVER HILL RD & NAVY DAY DR",
+        "description": "Station entrance is accessible from parking garage and the sidewalks from Silver Hill Road.",
+        "lat": 38.844289,
+        "lon": -76.932069,
+        "is_elevator": false
+      },
+      {
+        "name": "SILVER HILL RD & NAVY DAY DR",
+        "description": "Station entrance is accessible by bus bay, pedestrian bridge and the sidewalks from Silver Hill Road.",
+        "lat": 38.844258,
+        "lon": -76.932298,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "F11",
+    "codes": [
+      "F11"
+    ],
+    "name": "Branch Ave",
+    "lat": 38.826995,
+    "lon": -76.912134,
+    "lines": [
+      "GR"
+    ],
+    "address": "4707 Old Soper Rd, Suitland, MD 20746",
+    "entrances": [
+      {
+        "name": "AUTH WAY & W VILLAGE AVE",
+        "description": "Mezzanine entrance from the parking lot between north end of Auth Way and Capital Gateway Dr.",
+        "lat": 38.827195,
+        "lon": -76.912441,
+        "is_elevator": false
+      },
+      {
+        "name": "WOODS WAY & OLD SOPER RD",
+        "description": "Mezzanine entrance from bus bays, kiss&ride, and Old Soper Rd.",
+        "lat": 38.827079,
+        "lon": -76.912557,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "G01",
+    "codes": [
+      "G01"
+    ],
+    "name": "Benning Road",
+    "lat": 38.890488,
+    "lon": -76.938291,
+    "lines": [
+      "BL",
+      "SV"
+    ],
+    "address": "4500 Benning Rd NE, Washington, DC 20019",
+    "entrances": [
+      {
+        "name": "CENTRAL AVE NE & BENNING RD NE (ELEVATOR)",
+        "description": "Elevator from northeast corner of Central Ave and Benning Road NE.",
+        "lat": 38.890546,
+        "lon": -76.937531,
+        "is_elevator": true
+      },
+      {
+        "name": "CENTRAL AVE NE & BENNING RD NE",
+        "description": "Canopied escalator entrance at northeast corner of Central Ave and Benning Road NE.",
+        "lat": 38.890343,
+        "lon": -76.937376,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "G02",
+    "codes": [
+      "G02"
+    ],
+    "name": "Capitol Heights",
+    "lat": 38.889757,
+    "lon": -76.913382,
+    "lines": [
+      "BL",
+      "SV"
+    ],
+    "address": "133 Central Ave, Capitol Heights, MD 20743",
+    "entrances": [
+      {
+        "name": "E CAPITOL ST & SOUTHERN AVE (ELEVATOR)",
+        "description": "Elevator entrance from parking lot, bus bay, and the sidewalks from E Capital St.",
+        "lat": 38.88924,
+        "lon": -76.912991,
+        "is_elevator": true
+      },
+      {
+        "name": "E CAPITOL ST & SOUTHERN AVE",
+        "description": "Canopied escalator entrance from bus bay, located at southeast corner of Southern Ave and E Capital St NE.",
+        "lat": 38.889225,
+        "lon": -76.913268,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "G03",
+    "codes": [
+      "G03"
+    ],
+    "name": "Addison Road-Seat Pleasant",
+    "lat": 38.886713,
+    "lon": -76.893592,
+    "lines": [
+      "BL",
+      "SV"
+    ],
+    "address": "100 Addison Rd S, Capitol Heights, MD 20743",
+    "entrances": [
+      {
+        "name": "ADDISON RD & CENTRAL AVE",
+        "description": "Station entrance is reachable by the walkway from parking garage and the sidewalks from Central Ave.",
+        "lat": 38.886716,
+        "lon": -76.895749,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "G04",
+    "codes": [
+      "G04"
+    ],
+    "name": "Morgan Boulevard",
+    "lat": 38.8913,
+    "lon": -76.8682,
+    "lines": [
+      "BL",
+      "SV"
+    ],
+    "address": "401 Garrett A Morgan Blvd, Landover, MD 20785",
+    "entrances": [
+      {
+        "name": "GARRET A MORGAN BLVD & FIELDSTONE WAY",
+        "description": "Station entrance from bus bay and parking located west side of Garret A Morgan Blvd.",
+        "lat": 38.893551,
+        "lon": -76.868402,
+        "is_elevator": false
+      },
+      {
+        "name": "GARRET A MORGAN BLVD & SGT HARTMAN LN",
+        "description": "Station entrance is accessible from walkway at Garret A Morgan Blvd and SGT Hartman Ln.",
+        "lat": 38.893764,
+        "lon": -76.868543,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "G05",
+    "codes": [
+      "G05"
+    ],
+    "name": "Downtown Largo",
+    "lat": 38.9008,
+    "lon": -76.8449,
+    "lines": [
+      "BL",
+      "SV"
+    ],
+    "address": "9000 Lottsford Rd, Largo, MD 20774",
+    "entrances": [
+      {
+        "name": "HARRY S TRUMAN DR N & LARGO DR W",
+        "description": "Canopied entrance located east side of the station and is reachable by the walkway from parking lot and south parking garage.",
+        "lat": 38.899867,
+        "lon": -76.844918,
+        "is_elevator": false
+      },
+      {
+        "name": "HARRY S TRUMAN DR N & SHOPPERS WAY",
+        "description": "Facility entrance from west side of the station is accessible from bus bay and north side parking garage.",
+        "lat": 38.900147,
+        "lon": -76.845257,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "J02",
+    "codes": [
+      "J02"
+    ],
+    "name": "Van Dorn Street",
+    "lat": 38.799193,
+    "lon": -77.129407,
+    "lines": [
+      "BL"
+    ],
+    "address": "5690 Eisenhower Ave, Alexandria, VA 22310",
+    "entrances": [
+      {
+        "name": "EISENHOWER AVE (BUS BAY)",
+        "description": "Facility entrance from bus bay located southeast corner of Eisenhower Ave.",
+        "lat": 38.799535,
+        "lon": -77.129222,
+        "is_elevator": false
+      },
+      {
+        "name": "EISENHOWER AVE & METRO RD (TUNNEL)",
+        "description": "Passageway to station from parking lot and kiss&ride located northwest corner of Eisenhower Ave.",
+        "lat": 38.799708,
+        "lon": -77.129682,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "J03",
+    "codes": [
+      "J03"
+    ],
+    "name": "Franconia-Springfield",
+    "lat": 38.766129,
+    "lon": -77.168797,
+    "lines": [
+      "BL"
+    ],
+    "address": "6880 Frontier Dr, Springfield, VA 22150",
+    "entrances": [
+      {
+        "name": "FRANCONIA-SPRINGFIELD PKWY & FRONTIER DR (VRE)",
+        "description": "Facility entrance by pedestrian bridge connecting WMATA station and VRE station located on the south side.",
+        "lat": 38.766065,
+        "lon": -77.168705,
+        "is_elevator": false
+      },
+      {
+        "name": "FRANCONIA-SPRINGFIELD PKWY & FRONTIER DR",
+        "description": "Pedestrian bridge to station is accessible from the bus bay, kiss&ride, parking garage.",
+        "lat": 38.766676,
+        "lon": -77.169126,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K01",
+    "codes": [
+      "K01"
+    ],
+    "name": "Court House",
+    "lat": 38.891499,
+    "lon": -77.08391,
+    "lines": [
+      "OR",
+      "SV"
+    ],
+    "address": "2100 Wilson Blvd, Arlington, VA 22201",
+    "entrances": [
+      {
+        "name": "CLARENDON BLVD & 15TH ST N (ELEVATOR)",
+        "description": "Elevator entrance at Clarendon Blvd and 15th St N.",
+        "lat": 38.890472,
+        "lon": -77.086078,
+        "is_elevator": true
+      },
+      {
+        "name": "CLARENDON BLVD & N UHLE ST",
+        "description": "Escalator entrance at Strayer University building entrance at Clarendon Blvd and N Uhie St intersection.",
+        "lat": 38.891183,
+        "lon": -77.085011,
+        "is_elevator": false
+      },
+      {
+        "name": "COLONIAL VILLAGE",
+        "description": "CONNECTOR entrance - Street level elevator located at the northwest corner of Wilson Blvd and N.Uhle St(Colonial Village Building).",
+        "lat": 38.890885,
+        "lon": -77.084912,
+        "is_elevator": true
+      },
+      {
+        "name": "COURTHOUSE PLAZZA BUILDINGS",
+        "description": "CONNECTOR entrance - tunnel from Courthouse Plazza Buildings can access from street level elevator and escalator located in15th St N.",
+        "lat": 38.890821,
+        "lon": -77.084964,
+        "is_elevator": true
+      }
+    ]
+  },
+  {
+    "code": "K02",
+    "codes": [
+      "K02"
+    ],
+    "name": "Clarendon",
+    "lat": 38.886373,
+    "lon": -77.096963,
+    "lines": [
+      "OR",
+      "SV"
+    ],
+    "address": "3100 Wilson Blvd, Arlington, VA 22201",
+    "entrances": [
+      {
+        "name": "WILSON BLVD & N HUDSON ST (ELEVATOR)",
+        "description": "Elevator entrance from Clarendon Central Park, between Wilson Blvd and Clarendon Blvd.",
+        "lat": 38.886756,
+        "lon": -77.09567,
+        "is_elevator": true
+      },
+      {
+        "name": "3100 CLARENDON BLVD",
+        "description": "Government building entrance to intermediate passageway (only open during building hours).",
+        "lat": 38.887002,
+        "lon": -77.095287,
+        "is_elevator": false
+      },
+      {
+        "name": "WILSON BLVD & N HIGHLAND ST",
+        "description": "Canopied escalator and stairway entrance at southwest corner of Wilson Blvd and Highland St.",
+        "lat": 38.88718,
+        "lon": -77.0951,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K03",
+    "codes": [
+      "K03"
+    ],
+    "name": "Virginia Square-GMU",
+    "lat": 38.88331,
+    "lon": -77.104267,
+    "lines": [
+      "OR",
+      "SV"
+    ],
+    "address": "3600 Fairfax Drive, Arlington, VA 22201",
+    "entrances": [
+      {
+        "name": "N MONROE ST & N FAIRFAX DR (ELEVATOR)",
+        "description": "Street level elevator just north of escalator located west of North Monroe St.",
+        "lat": 38.883017,
+        "lon": -77.103295,
+        "is_elevator": true
+      },
+      {
+        "name": "N MONROE ST & 9TH ST N",
+        "description": "Station entrance from the southwest corner of North Monroe St and N.Fairfax Dr.",
+        "lat": 38.88283,
+        "lon": -77.103278,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K04",
+    "codes": [
+      "K04"
+    ],
+    "name": "Ballston-MU",
+    "lat": 38.882071,
+    "lon": -77.111845,
+    "lines": [
+      "OR",
+      "SV"
+    ],
+    "address": "4230 Fairfax Drive, Arlington, VA 22201",
+    "entrances": [
+      {
+        "name": "N FAIRFAX DR & N STUARD ST (NORTH ELEVATOR)",
+        "description": "Entrance elevators located at the northwest corner of N Fairfax Dr and N Stuart St.",
+        "lat": 38.882345,
+        "lon": -77.112135,
+        "is_elevator": true
+      },
+      {
+        "name": "N FAIRFAX DR & N STUARD ST (SOUTH ELEVATOR)",
+        "description": "Entrance elevators located at the southwest corner of N Fairfax Dr and N Stuart St.",
+        "lat": 38.882054,
+        "lon": -77.112097,
+        "is_elevator": true
+      },
+      {
+        "name": "N FAIRFAX DR & N STUARD ST",
+        "description": "Canopied escalator entrance at southeast corner of N Fairfax Dr and N Stuart St.",
+        "lat": 38.881868,
+        "lon": -77.111358,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K05",
+    "codes": [
+      "K05"
+    ],
+    "name": "East Falls Church",
+    "lat": 38.885841,
+    "lon": -77.157177,
+    "lines": [
+      "OR",
+      "SV"
+    ],
+    "address": "2001 N Sycamore St, Arlington, VA 22205",
+    "entrances": [
+      {
+        "name": "N SYCAMORE ST & 19TH ST N",
+        "description": "Street level station entrance located under I-66 is accessible by the walkway from bus bay and parking lot located at the north side and from kiss&ride area located at the south of the side station.",
+        "lat": 38.885893,
+        "lon": -77.156571,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K06",
+    "codes": [
+      "K06"
+    ],
+    "name": "West Falls Church",
+    "lat": 38.90067,
+    "lon": -77.189394,
+    "lines": [
+      "OR"
+    ],
+    "address": "7040 Haycock Rd, Falls Church, VA 22043",
+    "entrances": [
+      {
+        "name": "WEST FALLS-CHURCH STATION (NORTH BUSBAY)",
+        "description": "Station entrance from north side is accessible from bus bay located off Rt.267.",
+        "lat": 38.9011,
+        "lon": -77.188973,
+        "is_elevator": false
+      },
+      {
+        "name": "HAYCOCK RD & FALLS-CHURCH DR",
+        "description": "Pedestrian bridge to station from south side is accessible from bus bay, kiss&ride, parking garage located north of Haycock Rd.",
+        "lat": 38.900319,
+        "lon": -77.188878,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K07",
+    "codes": [
+      "K07"
+    ],
+    "name": "Dunn Loring-Merrifield",
+    "lat": 38.883015,
+    "lon": -77.228939,
+    "lines": [
+      "OR"
+    ],
+    "address": "2700 Gallows Rd, Vienna, VA 22180",
+    "entrances": [
+      {
+        "name": "GALLOWS RD & AVENIR PL",
+        "description": "Station entrance is accessible from bus bay, kiss&ride area and parking lot located at the northwest corner of Bellforest Dr and Gallows Rd.",
+        "lat": 38.882817,
+        "lon": -77.228436,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "K08",
+    "codes": [
+      "K08"
+    ],
+    "name": "Vienna/Fairfax-GMU",
+    "lat": 38.877693,
+    "lon": -77.271562,
+    "lines": [
+      "OR"
+    ],
+    "address": "9550 Saintsbury Dr, Fairfax, VA 22031",
+    "entrances": [
+      {
+        "name": "SAINTSBURY DR & ROYAL VICTORIA DR",
+        "description": "Pedestrian bridge to station from south side accessible by the sidewalks from south side parking lot, parking garage, bus bay and kiss&ride located on Saintsbury Dr.",
+        "lat": 38.877378,
+        "lon": -77.271284,
+        "is_elevator": false
+      },
+      {
+        "name": "VIRGINIA CENTER BLVD & CENTERBORO DR",
+        "description": "Pedestrian bridge to station from north side accessible by the sidewalks from north side parking lot, parking garage, bus bay and kiss&ride located off Virginia Center Blvd.",
+        "lat": 38.878301,
+        "lon": -77.271539,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N01",
+    "codes": [
+      "N01"
+    ],
+    "name": "McLean",
+    "lat": 38.924478,
+    "lon": -77.210167,
+    "lines": [
+      "SV"
+    ],
+    "address": "1824 Dolley Madison Boulevard, McLean, VA 22102",
+    "entrances": [
+      {
+        "name": "DOLLEY MADISON BLVD & COLSHIRE DR (ELEVATOR)",
+        "description": "South pavilion elevator is accessible from south bus bay, south kiss & ride, and the sidewalk along the south west corner of Dolley Madison Blvd and Colshire Dr.",
+        "lat": 38.924427,
+        "lon": -77.208588,
+        "is_elevator": true
+      },
+      {
+        "name": "DOLLEY MADISON BLVD & SCOTTS XING (ELEVATOR)",
+        "description": "Elevator inside the station is accessible from Dolley Madison, Capital One Dr. sidewalk, and Fairfax Connector bus bay.",
+        "lat": 38.924802,
+        "lon": -77.209491,
+        "is_elevator": true
+      },
+      {
+        "name": "DOLLEY MADISON BLVD & COLSHIRE DR",
+        "description": "South pavilion entrance accessible from south bus bay, south kiss & ride, and the sidewalk along the south west corner of Dolley Madison Blvd and Colshire Dr.",
+        "lat": 38.924575,
+        "lon": -77.208295,
+        "is_elevator": false
+      },
+      {
+        "name": "DOLLEY MADISON BLVD & SCOTTS XING",
+        "description": "Station entrance from Dolley Madison, Capital One Dr sidewalk, and Fairfax Connector bus bay.",
+        "lat": 38.924725,
+        "lon": -77.209528,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N02",
+    "codes": [
+      "N02"
+    ],
+    "name": "Tysons",
+    "lat": 38.920056,
+    "lon": -77.223314,
+    "lines": [
+      "SV"
+    ],
+    "address": "1943 Chain Bridge Road, McLean, VA 22102",
+    "entrances": [
+      {
+        "name": "TYSONGS BLVD & CHAIN BRIDGE RD (ELEVATOR)",
+        "description": "Elevator to the station accessible from the bus bay and sidewalk located at the northwest corner of Tysons Blvd and Chain Bridge Rd intersection.",
+        "lat": 38.920654,
+        "lon": -77.222564,
+        "is_elevator": true
+      },
+      {
+        "name": "TYSONS ONE PL & TYSONS BLVD (ELEVATOR)",
+        "description": "South pavilion elevator entrance from Fairfax Connector bus bay.",
+        "lat": 38.919778,
+        "lon": -77.222032,
+        "is_elevator": true
+      },
+      {
+        "name": "TYSONGS BLVD & CHAIN BRIDGE RD",
+        "description": "Station entrance from the bus bay and sidewalk located at the northwest corner of Tysons Blvd and Chain Bridge Rd intersection.",
+        "lat": 38.920579,
+        "lon": -77.222519,
+        "is_elevator": false
+      },
+      {
+        "name": "TYSONS ONE PL & TYSONS BLVD",
+        "description": "South pavilion entrance from station sideswalk and Fairfax Connector bus bay.",
+        "lat": 38.919767,
+        "lon": -77.222444,
+        "is_elevator": false
+      },
+      {
+        "name": "TYSONS MALL",
+        "description": "Non WMATA maintained entrance from the Tysons mall Pedestrian bridge",
+        "lat": 38.919749,
+        "lon": -77.221968,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N03",
+    "codes": [
+      "N03"
+    ],
+    "name": "Greensboro",
+    "lat": 38.919749,
+    "lon": -77.235192,
+    "lines": [
+      "SV"
+    ],
+    "address": "8305 Leesburg Pike, Vienna, VA 22182",
+    "entrances": [
+      {
+        "name": "LEESBURG PIKE & GREENSBORO STATION PL (ELEVATOR)",
+        "description": "North pavilion elevator entrance from Pinnacle Dr and SAIC Dr sidewalk.",
+        "lat": 38.920951,
+        "lon": -77.233127,
+        "is_elevator": true
+      },
+      {
+        "name": "LEESBURG PIKE & MARSHALLS DR (ELEVATOR)",
+        "description": "South pavilion elevator entrance is accessible from pavilion sidewalk along Leesburg Pike west bound.",
+        "lat": 38.92047,
+        "lon": -77.233959,
+        "is_elevator": true
+      },
+      {
+        "name": "LEESBURG PIKE & GREENSBORO STATION PL",
+        "description": "North pavilion entrance from Pinnacle Dr and SAIC Dr sidewalk.",
+        "lat": 38.921123,
+        "lon": -77.232932,
+        "is_elevator": false
+      },
+      {
+        "name": "LEESBURG PIKE & MARSHALLS DR",
+        "description": "South pavilion entrance from the west corner of Leesburg Pike and Marshalls Dr.",
+        "lat": 38.920691,
+        "lon": -77.234169,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N04",
+    "codes": [
+      "N04"
+    ],
+    "name": "Spring Hill",
+    "lat": 38.929273,
+    "lon": -77.241988,
+    "lines": [
+      "SV"
+    ],
+    "address": "1576 Spring Hill Road, Vienna, VA 22182",
+    "entrances": [
+      {
+        "name": "LEESBURG PIKE & SPRING HILL RD (NORTH ELEVATOR)",
+        "description": "North pavilion elevator is accessible from north bus bay, north kiss & ride, and the short term parking lot located at the north east corner of Leesburg Pike and Spring Hill Rd.",
+        "lat": 38.92915,
+        "lon": -77.241002,
+        "is_elevator": true
+      },
+      {
+        "name": "LEESBURG PIKE & SPRING HILL RD (SOUTH ELEVATOR)",
+        "description": "South pavilion elevator is accessible from the pavilion sidewalk along Leesburg Pike westbound.",
+        "lat": 38.928566,
+        "lon": -77.241841,
+        "is_elevator": true
+      },
+      {
+        "name": "LEESBURG PIKE & SPRING HILL RD (NORTH)",
+        "description": "North pavilion entrance is accessible from north bus bay, north kiss & ride, and the short term parking lot located at the north east corner of Leesburg Pike and Spring Hill Rd.",
+        "lat": 38.929311,
+        "lon": -77.240801,
+        "is_elevator": false
+      },
+      {
+        "name": "LEESBURG PIKE & SPRING HILL RD (SOUTH)",
+        "description": "South pavilion entrance from the west corner of Leesburg Pike and Spring Hill Road intersection.",
+        "lat": 38.92838,
+        "lon": -77.241657,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N06",
+    "codes": [
+      "N06"
+    ],
+    "name": "Wiehle-Reston East",
+    "lat": 38.947753,
+    "lon": -77.340179,
+    "lines": [
+      "SV"
+    ],
+    "address": "1908 Reston Station Blvd, Reston, VA 20190",
+    "entrances": [
+      {
+        "name": "DULLAS TOLL RD EXIT 13 & WIEHLE AVE (ELEVATOR)",
+        "description": "South pavilion elevator entrance from station south bus bay.",
+        "lat": 38.946993,
+        "lon": -77.340156,
+        "is_elevator": true
+      },
+      {
+        "name": "DULLAS TOLL RD EXIT 13 & WIEHLE AVE",
+        "description": "South pavilion entrance from station south bus bay.",
+        "lat": 38.946866,
+        "lon": -77.339887,
+        "is_elevator": false
+      },
+      {
+        "name": "WIEHLE AVE & RESTON STATION BLVD",
+        "description": "Walkway to station pedestrian bridge is accessible from parking garage and kiss & ride located at the north side of the station.",
+        "lat": 38.948302,
+        "lon": -77.338911,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N07",
+    "codes": [
+      "N07"
+    ],
+    "name": "Reston Town Center",
+    "lat": 38.952768,
+    "lon": -77.360185,
+    "lines": [
+      "SV"
+    ],
+    "address": "1998 Edmund Halley Drive, Reston, VA 20191",
+    "entrances": [
+      {
+        "name": "RESTON STATION SOUTH BUSBAY (ELEVATOR)",
+        "description": "South pavilion elevator entrance from south bus bay.",
+        "lat": 38.952267,
+        "lon": -77.360885,
+        "is_elevator": true
+      },
+      {
+        "name": "SUNSET HILLS RD & TOWN CENTER PKWY (ELEVATOR)",
+        "description": "North pavilion elevator entrance from Sunset Hills Rd north bus bay.",
+        "lat": 38.953444,
+        "lon": -77.3601,
+        "is_elevator": true
+      },
+      {
+        "name": "RESTON STATION SOUTH BUSBAY",
+        "description": "South pavilion entrance from south bus bay.",
+        "lat": 38.952306,
+        "lon": -77.361231,
+        "is_elevator": false
+      },
+      {
+        "name": "SUNSET HILLS RD & TOWN CENTER PKWY",
+        "description": "North pavilion entrance from Sunset Hills Rd north bus bay.",
+        "lat": 38.953557,
+        "lon": -77.359852,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N08",
+    "codes": [
+      "N08"
+    ],
+    "name": "Herndon",
+    "lat": 38.952821,
+    "lon": -77.385178,
+    "lines": [
+      "SV"
+    ],
+    "address": "12530 Sunrise Valley Dr, Herndon, VA 20191",
+    "entrances": [
+      {
+        "name": "570 HERNDON PKWY (ELEVATOR)",
+        "description": "North pavilion elevator entrance from Herndon Pkwy sidewalk.",
+        "lat": 38.953549,
+        "lon": -77.384897,
+        "is_elevator": true
+      },
+      {
+        "name": "HERNDON STATION NORTH BUSBAY (ELEVATOR)",
+        "description": "South pavilion elevator entrance from south bus bay.",
+        "lat": 38.95176,
+        "lon": -77.384883,
+        "is_elevator": true
+      },
+      {
+        "name": "570 HERNDON PKWY",
+        "description": "North pavilion entrance from Herndon Pkwy sidewalk.",
+        "lat": 38.953548,
+        "lon": -77.384556,
+        "is_elevator": false
+      },
+      {
+        "name": "HERNDON STATION NORTH BUSBAY",
+        "description": "South pavilion entrance from south bus bay.",
+        "lat": 38.951756,
+        "lon": -77.384535,
+        "is_elevator": false
+      },
+      {
+        "name": "HERNDON-MONROE PARK AND RIDE",
+        "description": "Station entrace from the Herdon-Monroe Park and Ride garage building",
+        "lat": 38.951571,
+        "lon": -77.384837,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N09",
+    "codes": [
+      "N09"
+    ],
+    "name": "Innovation Center",
+    "lat": 38.960758,
+    "lon": -77.415295,
+    "lines": [
+      "SV"
+    ],
+    "address": "13747-A Sunrise Valley Dr, Herndon, VA 20171",
+    "entrances": [
+      {
+        "name": "INNOVATION STATION SOUTH BUSBAY (ELEVATOR)",
+        "description": "South pavilion elevator entrance from south bus bay.",
+        "lat": 38.960203,
+        "lon": -77.417127,
+        "is_elevator": true
+      },
+      {
+        "name": "INNOVATION STATION SOUTH BUSBAY",
+        "description": "South pavilion entrance from south bus bay.",
+        "lat": 38.959985,
+        "lon": -77.417209,
+        "is_elevator": false
+      },
+      {
+        "name": "INNOVATION STATION NORTH BUSBAY",
+        "description": "North pavilion entrance from north bus bay.",
+        "lat": 38.961947,
+        "lon": -77.416808,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N10",
+    "codes": [
+      "N10"
+    ],
+    "name": "Washington Dulles International Airport",
+    "lat": 38.955784,
+    "lon": -77.448148,
+    "lines": [
+      "SV"
+    ],
+    "address": "44920 Saarinen Circle, Dulles, VA 20166",
+    "entrances": [
+      {
+        "name": "DULLES AIRPORT PARKING GARAGE",
+        "description": "Station entrace from the airport parking garage",
+        "lat": 38.955925,
+        "lon": -77.447755,
+        "is_elevator": false
+      },
+      {
+        "name": "DULLES AIRPORT PEDESTRIAN TUNNEL",
+        "description": "Station entrace from the pedestrain tunnel to airport terminal",
+        "lat": 38.953125,
+        "lon": -77.448725,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N11",
+    "codes": [
+      "N11"
+    ],
+    "name": "Loudoun Gateway",
+    "lat": 38.99204,
+    "lon": -77.460685,
+    "lines": [
+      "SV"
+    ],
+    "address": "22505 Lockridge Rd, Ashburn, VA 20166",
+    "entrances": [
+      {
+        "name": "LOUDOUN GATEWAY STATION NORTH BUSBAY (ELEVATOR)",
+        "description": "North pavilion elevator entrance from north bus bay.",
+        "lat": 38.992896,
+        "lon": -77.459989,
+        "is_elevator": true
+      },
+      {
+        "name": "LOUDOUN GATEWAY STATION SOUTH BUSBAY",
+        "description": "North pavilion entrance from north bus bay.",
+        "lat": 38.993168,
+        "lon": -77.459986,
+        "is_elevator": false
+      },
+      {
+        "name": "LOUDOUN GATEWAY STATION GARAGE ENTRANCE",
+        "description": "Entrance from parking garage pedestrian bridge",
+        "lat": 38.992947,
+        "lon": -77.459859,
+        "is_elevator": false
+      }
+    ]
+  },
+  {
+    "code": "N12",
+    "codes": [
+      "N12"
+    ],
+    "name": "Ashburn",
+    "lat": 39.005283,
+    "lon": -77.491537,
+    "lines": [
+      "SV"
+    ],
+    "address": "43624 Croson Ln, Ashburn, VA 20148",
+    "entrances": [
+      {
+        "name": "43625 CROSON LN (ELEVATOR)",
+        "description": "South pavilion elevator entrance from south bus bay.",
+        "lat": 39.004355,
+        "lon": -77.491733,
+        "is_elevator": true
+      },
+      {
+        "name": "43655 ASHBURN METRO DRIVE (ELEVATOR)",
+        "description": "North pavilion elevator entrance from north bus bay.",
+        "lat": 39.004805,
+        "lon": -77.490186,
+        "is_elevator": true
+      },
+      {
+        "name": "43625 CROSON LN",
+        "description": "South pavilion entrance from south bus bay.",
+        "lat": 39.004563,
+        "lon": -77.491941,
+        "is_elevator": false
+      },
+      {
+        "name": "43655 ASHBURN METRO DRIVE",
+        "description": "North pavilion entrance from north bus bay.",
+        "lat": 39.004983,
+        "lon": -77.489899,
+        "is_elevator": false
+      }
+    ]
   }
 ]

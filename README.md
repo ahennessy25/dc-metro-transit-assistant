@@ -41,6 +41,18 @@ A live demo on Hugging Face Spaces is private. To request access, open an [issue
 - Handles ambiguous station names by asking a clarifying question or stating an
   assumption, rather than silently guessing
 
+## Data sources
+
+Station accessibility info (`data/rag_sources/compile_sources.py`) comes from WMATA's
+Rail Station List and Station Entrances APIs. An entrance is flagged as having an
+elevator by a simple keyword match — "elevator" appearing (case-insensitive) in that
+entrance's `Name` or `Description` field, exactly as WMATA wrote it — not by inferring
+accessibility from station type or any other signal. This is a literal-text match, not
+a judgment of current status: a description that happens to pair "elevator" with a
+negation/outage word (e.g. "elevator closed for construction") would still match today;
+`find_ambiguous_elevator_entrances()` flags any such cases for manual review each time
+the data is refreshed.
+
 ## Setup
 
 ### Prerequisites
