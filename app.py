@@ -13,6 +13,11 @@ executor = ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS)
 
 try:
     ensure_index_built()
+    import chromadb
+    from data.rag_index import CHROMA_DB_DIR, COLLECTION_NAME
+    _diag_client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+    _diag_collection = _diag_client.get_collection(COLLECTION_NAME)
+    print(f"✅ RAG index ready: {_diag_collection.count()} chunks in '{COLLECTION_NAME}' at {CHROMA_DB_DIR}")
 except Exception as e:
     print(f"⚠️ Failed to build RAG index at startup: {e}")
 
