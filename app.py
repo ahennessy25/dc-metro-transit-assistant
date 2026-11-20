@@ -4,11 +4,17 @@ from concurrent.futures import ThreadPoolExecutor
 import gradio as gr
 from agent.core import ConfigurationError, ask
 from config import ANTHROPIC_API_KEY
+from data.rag_index import ensure_index_built
 
 MAX_CONCURRENT_REQUESTS = 4
 MAX_QUESTION_LENGTH = 800
 
 executor = ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS)
+
+try:
+    ensure_index_built()
+except Exception as e:
+    print(f"⚠️ Failed to build RAG index at startup: {e}")
 
 THINKING_FRAMES = [
     "🔎 Thinking",
